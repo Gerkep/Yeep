@@ -54,7 +54,7 @@ const Home: NextPage = () => {
       </ConsultationContainer>
       <AppearingTitle>
         <Subtitle>Solutions for all industries</Subtitle>
-        <Description>Tested and reccommended by leaders of major brands from diverse industries.</Description>
+        <Description>Tested and recommended by leaders of major brands from diverse industries.</Description>
       </AppearingTitle>
       <Testimonials>
         <TestimonialContainer>
