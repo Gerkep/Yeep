@@ -8,7 +8,6 @@ import { useState } from 'react';
 import Footer from '../components/Footer';
 import codeIcon from "../public/images/codeIcon.png";
 import { HiPhone } from 'react-icons/hi';
-import ScalingElement from '../components/animation/ScalingElement';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
 const Home: NextPage = () => {
