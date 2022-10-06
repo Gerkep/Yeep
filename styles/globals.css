@@ -21,6 +21,47 @@ a {
   }
   body {
     color: black;
-    background: white;
+    background-image: url("../public/images/background.png");
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+  }
+  .codeIcon{
+    background-image: url("../public//images//codeIcon.png");
+  }
+  .desktopIcon{
+    background-image: url("../public//images//desktopIcon.png");
+  }
+  .safetyIcon{
+    background-image: url("../public//images//safetyIcon.png");
+  }
+  .contractIcon{
+    background-image: url("../public//images//contractIcon.png");
+  }
+  .findIcon{
+    background-image: url("../public//images//findIcon.png");
+  }
+  .ubraniaLogo{
+    background-image: url("../public//images//ubrania.png");
+  }
+  .cityParkLogo{
+    background-image: url("../public//images//citypark.png");
+  }
+  .phoneIcon{
+    grid-area: phoneIcon;
+    color: white;
+    width: 8vw;
+    height: 8vw;
+  }
+  .discountImage{
+    background-image: url("../public//images//macbookpanels.png");
+  }
+  @media only screen and (min-width: 768px) {
+    .phoneIcon{
+      grid-area: phoneIcon;
+      color: white;
+      width: 2.5vw;
+      height: 2.5vw;
+    }
   }
 }
