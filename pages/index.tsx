@@ -7,11 +7,33 @@ import Footer from '../components/Footer';
 import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
+import { send } from "@emailjs/browser";
+
 const Home: NextPage = () => {
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    // const templateParams = {
+    //   email: `${email}`,
+    //   maessage: `${message}`,
+    //   name: `${name}`,
+    // };
+
+    // send('service_8wes2jm', 'template_7dw9y3i', templateParams, process.env.NEXT_PUBLIC_EMAILJS_USER_KEY)
+    // .then(function(response) {
+    //     console.log('SUCCESS!', response.status);
+    //     setLoading(false);
+    // }, function(error) {
+    //     console.log('FAILED...', error);
+    //     setLoading(false);
+    // });  
+  }
   return (
     <>
       <Navbar />
@@ -102,11 +124,17 @@ const Home: NextPage = () => {
         <Subtitle>Contact us</Subtitle>
         <Description>No matter if you already have an idea or not, we will find a way to take your business to another level.</Description>
       </AppearingTitle>
-      <ContactForm>
+      <ContactForm onSubmit={(e) => sendEmail(e)}>
         <ContactInput placeholder='Full Name' value={name} onChange={(e) => setName(e.target.value)} type="text" required></ContactInput>
         <ContactInput placeholder='your@email.com' value={email} onChange={(e) => setEmail(e.target.value)} type="email" required></ContactInput>
         <ContactTextField placeholder='Your message to us...' value={message} onChange={(e) => setMessage(e.target.value)} required></ContactTextField>
-        <SubmitButton>Send</SubmitButton>
+        <SubmitButton>
+        {!loading ?
+          <p>Send</p>
+          : 
+          <p className='spinner-white'></p>
+          }
+        </SubmitButton>
       </ContactForm>
       <Footer />
     </>
@@ -548,6 +576,8 @@ const SubmitButton = styled.button`
   width: 80%;
   border-radius: 10px;
   border: none;
+  display: flex;
+  justify-content: center;
   height: 15vw;
   font-size: 4vw;
   background: linear-gradient(20deg, #5755F9, #69C0FF);
