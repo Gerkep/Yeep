@@ -1,12 +1,9 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import styled from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
 import Footer from '../components/Footer';
-import codeIcon from "../public/images/codeIcon.png";
 import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
@@ -63,7 +60,7 @@ const Home: NextPage = () => {
       </Testimonials>
       <AppearingTitle>
         <Subtitle>Packed with advanced features</Subtitle>
-        <Description>A complete suite of technological and legal features. Setting you up for success..</Description>
+        <Description>A complete suite of technological and legal features. Setting you up for success</Description>
       </AppearingTitle>
       <Features>
         <Feature>
@@ -74,22 +71,22 @@ const Home: NextPage = () => {
         <Feature>
           <FeatureIcon className='desktopIcon'></FeatureIcon>
           <FeatureTitle>Modern, responsive, custom website</FeatureTitle>
-          <FeatureDescription>Built with Next.js and serverside rendering. From Figma to code.</FeatureDescription>
+          <FeatureDescription>Built with Next.js and serverside rendering. From Figma to code</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon className='safetyIcon'></FeatureIcon>
           <FeatureTitle>Enterprise-grade security</FeatureTitle>
-          <FeatureDescription>Security built into code. Legal agreements to protect your liability.</FeatureDescription>
+          <FeatureDescription>Security built into code. Legal agreements to protect your liability</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon className='contractIcon'></FeatureIcon>
           <FeatureTitle>Make it legal</FeatureTitle>
-          <FeatureDescription>Not everything in web3 is regulated yet. We will make sure your business is 100% legal.</FeatureDescription>
+          <FeatureDescription>Not everything in web3 is regulated yet. We will make sure your business is 100% legal</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon className='findIcon'></FeatureIcon>
           <FeatureTitle>Market research</FeatureTitle>
-          <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race.</FeatureDescription>
+          <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race</FeatureDescription>
         </Feature>
       </Features>
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
@@ -562,5 +559,9 @@ const SubmitButton = styled.button`
     font-size: 1.2vw;
     width: 20%;
     margin: 2vw 0vw 0vw 0;
+    transition: all 0.3s ease;
+    &:hover  {
+      transform: scale(1.05);
+    }
   }
 `

@@ -12,12 +12,6 @@ const Footer: NextPage = () => {
           <h4 className="footer-section-header">Customer Service</h4>
           <div className="footer-links">
             <a
-              href="https://www.victorgallery.pl/static/docs/returns.1fe466ecae07.pdf"
-              className="footer-link"
-            >
-              Returns
-            </a>
-            <a
               href="https://www.victorgallery.pl/static/docs/privacy.39fe4d89656b.pdf"
               className="footer-link"
             >
