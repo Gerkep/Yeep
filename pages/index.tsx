@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         <ContactButton>Contact us</ContactButton>
         <LearnMoreButton><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
-      <ConsultationContainer>
+      <ConsultationContainer href='https://calendly.com/'>
         <ConsultationComponent>
           <HiPhone className='phoneIcon'/>
           <ConsultationTitle className='consultationText'>Schedule 1h consultation now!</ConsultationTitle>
@@ -148,7 +148,7 @@ const ButtonsContainer = styled.div`
   justify-content: center;
   margin-top: 8vw;
 `
-const ConsultationContainer = styled.div`
+const ConsultationContainer = styled.a`
   width: 100vw;
   display: flex;
   justify-content: center;
