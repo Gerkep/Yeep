@@ -72,6 +72,9 @@ a {
   .cityParkLogo{
     background-image: url("../public//images//citypark.png");
   }
+  .dataIcon{
+    background-image: url("../public//images//dataIcon.png");
+  }
   .phoneIcon{
     grid-area: phoneIcon;
     color: white;
