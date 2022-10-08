@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
 import Footer from '../components/Footer';
+import '../styles/globals.css';
 import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
