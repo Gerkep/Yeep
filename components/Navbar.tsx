@@ -4,7 +4,7 @@ const Navbar = () => {
     return(
         <Nav>
             <Logo></Logo>
-            <ContactButton> Contact us</ContactButton>
+            <ContactButton href='#contact'> Contact us</ContactButton>
             <div style={{position: "absolute", top: "0", right: "0", padding: "2vw"}}>
                 
             </div>
@@ -37,14 +37,16 @@ const Logo = styled.div`
     }
 `
 
-const ContactButton = styled.button`
+const ContactButton = styled.a`
         display: none;
         color: white;
         &:hover  {
             transform: scale(1.05);
         }
         @media only screen and (min-width: 768px) {
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: absolute;
           right: 2vw;
           top: 2.5vw;

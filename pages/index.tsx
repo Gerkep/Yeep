@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </AppearingTitle>
       <MainDescription>A software house implementing web3 from start to finish. Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
-        <ContactButton>Contact us</ContactButton>
+        <ContactButton href='#contact'>Contact us</ContactButton>
         <LearnMoreButton><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
       <ConsultationContainer href='https://calendly.com/'>
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
         </Feature>
       </Features>
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
-        <ContactButton>Contact us</ContactButton>
+        <ContactButton href='#contact'>Contact us</ContactButton>
       </div>
       <DiscountContainer>
         <SlideLeft>
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
         <DiscountImage className='discountImage'></DiscountImage>
       </DiscountContainer>
       <AppearingTitle>
-        <Subtitle>Contact us</Subtitle>
+        <Subtitle id='contact'>Contact us</Subtitle>
         <Description>No matter if you already have an idea or not, we will find a way to take your business to another level.</Description>
       </AppearingTitle>
       <ContactForm onSubmit={(e) => sendEmail(e)}>
@@ -260,7 +260,7 @@ const ConsultationTitle = styled.h3`
   }
 `
 
-const ContactButton = styled.button`
+const ContactButton = styled.a`
         border-radius: 10px; 
         background: linear-gradient(20deg, #5755F9, #69C0FF);
         background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
@@ -270,6 +270,10 @@ const ContactButton = styled.button`
         height: 12vw;
         font-size: 3vw;
         transition: all 0.3s ease;
+        color: white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         border: none;
         margin-top: 18vw;
         color: white;
@@ -468,7 +472,7 @@ const FeatureTitle = styled.h3`
 
 const FeatureDescription = styled.p`
   color: white;
-  font-size: 3vw;
+  font-size: 4vw;
   color: #5F5F5F;
   @media only screen and (min-width: 768px) {
     font-size: 1vw;
