@@ -270,6 +270,7 @@ const ContactButton = styled.button`
         transition: all 0.3s ease;
         border: none;
         margin-top: 18vw;
+        color: white;
         &:hover  {
             transform: scale(1.05);
             box-shadow: 1px 1px 45px #7297FC;
@@ -525,7 +526,7 @@ const DiscountText = styled.div`
 `
 
 const ContactForm = styled.form`
-  width: 70vw;
+  width: 90vw;
   padding 7vw 8vw 7vw 8vw;
   background-color: black;
   margin: 0 auto;

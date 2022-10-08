@@ -39,6 +39,7 @@ const Logo = styled.div`
 
 const ContactButton = styled.button`
         display: none;
+        color: white;
         &:hover  {
             transform: scale(1.05);
         }
