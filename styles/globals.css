@@ -51,9 +51,6 @@ a {
     background-size: cover;
     background-color: white;
   }
-  .codeIcon{
-    background-image: url("../public//images//codeIcon.png");
-  }
   .desktopIcon{
     background-image: url("../public//images//desktopIcon.png");
   }

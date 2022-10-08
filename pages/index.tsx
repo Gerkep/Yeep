@@ -8,6 +8,8 @@ import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
 import { send } from "@emailjs/browser";
+import codeIcon from '../public/img/codeIcon.png';
+import Image from 'next/image';
 
 const Home: NextPage = () => {
 
@@ -86,7 +88,9 @@ const Home: NextPage = () => {
       </AppearingTitle>
       <Features>
         <Feature>
-          <FeatureIcon className='codeIcon'></FeatureIcon>
+          <FeatureIcon>
+                <Image alt="stayImage" layout='fill' objectFit='contain'  src={codeIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Custom-made smart contracts</FeatureTitle>
           <FeatureDescription>Our team of professional web3 devs will develop for you smart contracts with latest technologies</FeatureDescription>
         </Feature>
@@ -155,7 +159,7 @@ const MainTitle = styled.h1`
   width: 90%;
   font-size: 10vw;
   @media only screen and (min-width: 768px) {
-    margin-top: 15vw;
+    margin-top: 13vw;
     font-size: 4vw;
     width: 50vw;
   }
@@ -264,7 +268,7 @@ const ContactButton = styled.a`
         border-radius: 10px; 
         background: linear-gradient(20deg, #5755F9, #69C0FF);
         background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-        font-weight:800;
+        font-weight: 500;
         cursor: pointer;
         width: 70vw;
         height: 12vw;
@@ -296,7 +300,7 @@ const LearnMoreButton = styled.button`
   border: none;
   margin-left: 5vw;
   font-size: 1.2vw;
-  font-weight: 800;
+  font-weight: 500;
   display: none;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -451,6 +455,7 @@ const Feature = styled.div`
 const FeatureIcon = styled.div`
   width: 12vw;
   height: 12vw;
+  position: relative;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -603,7 +608,7 @@ const SubmitButton = styled.button`
   font-size: 4vw;
   background: linear-gradient(20deg, #5755F9, #69C0FF);
   background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-  font-weight: 800;
+  font-weight: 500;
   cursor: pointer;
   margin: 5vw 0 5vw 0;
   @media only screen and (min-width: 768px) {

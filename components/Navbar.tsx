@@ -56,7 +56,12 @@ const ContactButton = styled.a`
             border: none;       
             background: linear-gradient(20deg, #5755F9, #69C0FF);
             background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-            font-weight: 800;
+            font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover  {
+                transform: scale(1.05);
+                box-shadow: 1px 1px 45px #7297FC;
+              }
         }
 `
