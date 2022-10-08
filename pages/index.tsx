@@ -262,6 +262,7 @@ const ConsultationTitle = styled.h3`
 const ContactButton = styled.button`
         border-radius: 10px; 
         background: linear-gradient(20deg, #5755F9, #69C0FF);
+        background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
         font-weight:800;
         cursor: pointer;
         width: 70vw;

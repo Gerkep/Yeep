@@ -53,6 +53,7 @@ const ContactButton = styled.button`
           border-radius: 10px;
             border: none;       
             background: linear-gradient(20deg, #5755F9, #69C0FF);
+            background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
             font-weight: 800;
             cursor: pointer;
         }
