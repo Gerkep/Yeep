@@ -46,7 +46,7 @@ a {
   }
   body {
     color: black;
-    background-image: url("../public/images/background.png");
+    background-image: url("../public/images/background-mobile.png");
     background-position: center;
     background-size: cover;
     background-color: white;
@@ -85,6 +85,9 @@ a {
     background-image: url("../public//images//macbookpanels.png");
   }
   @media only screen and (min-width: 768px) {
+    body {
+      background-image: url("../public/images/background.png");
+    }
     .phoneIcon{
       grid-area: phoneIcon;
       color: white;

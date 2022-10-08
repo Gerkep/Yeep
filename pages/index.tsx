@@ -153,7 +153,7 @@ const MainTitle = styled.h1`
   margin-top: 40vw;
   text-align: center;
   width: 90%;
-  font-size: 8vw;
+  font-size: 10vw;
   @media only screen and (min-width: 768px) {
     margin-top: 15vw;
     font-size: 4vw;
@@ -198,8 +198,9 @@ const ConsultationComponent = styled.div`
   margin-right: 1vw;
   border-radius: 10px;
   margin-top: 10vw;
+  position: relative;
   display: grid; 
-  grid-template-columns: 20% 80%; 
+  grid-template-columns: 10% 90%; 
   grid-template-rows: 1fr 1fr; 
   gap: 0px 0px; 
   grid-template-areas: 
@@ -250,7 +251,7 @@ const ConsultationPrice = styled.div`
 
 const ConsultationTitle = styled.h3`
   color: white; 
-  font-size: 3.1vw;
+  font-size: 3.5vw;
   grid-area: consultationText;
   text-align: right;
   margin-top: -0.5vw;
@@ -321,15 +322,16 @@ const Subtitle = styled.h2`
 `
 
 const Description = styled.p`
-  display: none;
+  margin: 0 auto;
+  text-align: center;
+  width: 80vw;
+  margin-top: 5vw;
+  font-size: 4vw;
+  color: #5F5F5F;
   @media only screen and (min-width: 768px) {
-    margin: 0 auto;
-    display: block;
-    text-align: center;
     width: 32vw;
     margin-top: 1.5vw;
     font-size: 1.4vw;
-    color: #5F5F5F;
   }
 `
 
@@ -479,7 +481,7 @@ const DiscountContainer = styled.div`
   width: 100%;
   display: grid; 
   grid-template-columns: 1fr; 
-  grid-template-rows: 1fr 1fr; 
+  grid-template-rows: 0.7fr 1.3fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     "."
@@ -497,10 +499,15 @@ const DiscountContainer = styled.div`
 
 const DiscountImage = styled.div`
   width: 100%;
-  height: 40vw;
+  height: 60vw;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    height: 40vw;
+  }
+
 `
 
 const DiscountColorfulText = styled.p`
@@ -518,6 +525,7 @@ const DiscountColorfulText = styled.p`
 const DiscountText = styled.div`
     font-size: 5vw;
     text-align: center;
+    height: 1vw;
     width: 100%;
     @media only screen and (min-width: 768px) {
       font-size: 2.8vw;
@@ -583,11 +591,14 @@ const SubmitButton = styled.button`
   width: 80%;
   border-radius: 10px;
   border: none;
+  color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 15vw;
   font-size: 4vw;
   background: linear-gradient(20deg, #5755F9, #69C0FF);
+  background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
   font-weight: 800;
   cursor: pointer;
   margin: 5vw 0 5vw 0;
