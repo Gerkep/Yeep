@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Navbar from '../components/Navbar'
-import PricingSection from "../components/PricingSection"
 import styled from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
@@ -146,7 +145,6 @@ const Home: NextPage = () => {
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
         <ContactButton href='#contact'>Contact us</ContactButton>
       </div>
-      <PricingSection></PricingSection>
       <DiscountContainer>
         <SlideLeft>
           <DiscountText style={{}}><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3!</DiscountText>
