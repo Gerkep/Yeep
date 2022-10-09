@@ -54,27 +54,13 @@ a {
     background-size: cover;
     background-color: white;
   }
-  .phoneIcon{
-    grid-area: phoneIcon;
-    color: white;
-    width: 8vw;
-    height: 8vw;
-  }
+
   .pricing-container{
     margin-top: 40vw;
   }
   @media only screen and (min-width: 768px) {
     body {
       background-image: url("../public/img/background.png");
-    }
-    .pricing-container{
-      margin-top: 14vw;
-    }
-    .phoneIcon{
-      grid-area: phoneIcon;
-      color: white;
-      width: 2.5vw;
-      height: 2.5vw;
     }
   }
 }

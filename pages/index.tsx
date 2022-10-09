@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from '../components/Navbar'
+import PricingSection from "../components/PricingSection";
 import styled from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
@@ -15,6 +16,7 @@ import findIcon from '../public/img/findIcon.png';
 import ubraniaLogo from '../public/img/ubrania.png';
 import cityParkLogo from '../public/img/citypark.png';
 import dataIcon from '../public/img/dataIcon.png';
+import phoneIcon from '../public/img/phoneIcon.png';
 import desktopIcon from '../public/img/desktopIcon.png';
 import discountImage from '../public/img/macbookpanels.png';
 import Image from 'next/image';
@@ -55,10 +57,12 @@ const Home: NextPage = () => {
         <ContactButton href='#contact'>Contact us</ContactButton>
         <LearnMoreButton><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
-      <ConsultationContainer href='https://calendly.com/'>
-        <ConsultationComponent>
-          <HiPhone className='phoneIcon'/>
-          <ConsultationTitle className='consultationText'>Schedule 1h consultation now!</ConsultationTitle>
+      <ConsultationContainer>
+        <ConsultationComponent href='https://calendly.com/'>
+          <PhoneIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={phoneIcon}></Image>
+          </PhoneIcon>
+          <ConsultationTitle className='consultationText'>Book 1h consultation now!</ConsultationTitle>
           <ConsultationPrice className='consultationPrice'><p style={{textDecoration: "line-through", display: "inline"}}>$30</p> <ColorfulText>Free!</ColorfulText></ConsultationPrice>
         </ConsultationComponent>
       </ConsultationContainer>
@@ -143,8 +147,8 @@ const Home: NextPage = () => {
         </Feature>
       </Features>
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
-        <ContactButton href='#contact'>Contact us</ContactButton>
       </div>
+      <PricingSection></PricingSection>
       <DiscountContainer>
         <SlideLeft>
           <DiscountText style={{}}><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3!</DiscountText>
@@ -212,7 +216,7 @@ const ButtonsContainer = styled.div`
     margin-top: 6vw;
   }
 `
-const ConsultationContainer = styled.a`
+const ConsultationContainer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -225,7 +229,7 @@ const ConsultationContainer = styled.a`
     margin-top: 2vw;
   }
 `
-const ConsultationComponent = styled.div`
+const ConsultationComponent = styled.a`
   width: 70vw;
   padding: 4vw;
   background-color: #16151B;
@@ -284,15 +288,27 @@ const ConsultationPrice = styled.div`
   }
 `
 
+const PhoneIcon = styled.div`
+  width: 8vw;
+  height: 8vw;
+  grid-area: phoneIcon;
+  position: relative;
+  @media only screen and (min-width: 768px) {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+`
+
 const ConsultationTitle = styled.h3`
   color: white; 
-  font-size: 3.5vw;
+  font-size: 4vw;
   grid-area: consultationText;
   text-align: right;
   font-weight: 500;
   margin-top: -2vw;
   @media only screen and (min-width: 768px) {
-    font-size: 0.9vw; 
+    font-size: 1.1vw; 
+    margin-top: -1vw;
   }
 `
 
@@ -524,16 +540,12 @@ const FeatureDescription = styled.p`
 const DiscountContainer = styled.div`
   margin-top: 30vw;
   width: 100%;
-  display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 0.7fr 1.3fr; 
+  display: none;
   gap: 0px 0px; 
-  grid-template-areas: 
-    "."
-    "."; 
   @media only screen and (min-width: 768px) {
     padding: 0 0vw 0 4vw;
     margin-top: 12vw;
+    display: grid;
     grid-template-columns: 45% 50%; 
     grid-template-rows: 1fr; 
     grid-template-areas: 
