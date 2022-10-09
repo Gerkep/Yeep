@@ -103,6 +103,13 @@ const Home: NextPage = () => {
         <Description>A complete suite of technological and legal features. Setting you up for success</Description>
       </AppearingTitle>
       <Features>
+      <Feature>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={dataIcon}></Image>
+          </FeatureIcon>
+          <FeatureTitle>Tokenization & Nftcation</FeatureTitle>
+          <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning.</FeatureDescription>
+        </Feature>
         <Feature>
           <FeatureIcon>
                 <Image alt="stayImage" layout='fill' objectFit='contain'  src={codeIcon}></Image>
@@ -137,13 +144,6 @@ const Home: NextPage = () => {
           </FeatureIcon>
           <FeatureTitle>Market research</FeatureTitle>
           <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race</FeatureDescription>
-        </Feature>
-        <Feature>
-          <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={dataIcon}></Image>
-          </FeatureIcon>
-          <FeatureTitle>Tokenization & Nftcation</FeatureTitle>
-          <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning.</FeatureDescription>
         </Feature>
       </Features>
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
