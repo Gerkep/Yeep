@@ -63,7 +63,7 @@ export default function Example() {
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400 hover:bg-gray-50"
                             aria-describedby="tier-hobby"
                           >
-                            Start your trial
+                            Start now
                           </a>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ export default function Example() {
                           className="block w-full rounded-lg bg-gradient-to-r from-blue-600 to-cyan-400 px-6 py-4 text-center text-xl font-medium leading-6 text-white hover:bg-indigo-700"
                           aria-describedby="tier-growth"
                         >
-                          Start your trial
+                          Start now
                         </a>
                       </div>
                     </div>
@@ -160,7 +160,7 @@ export default function Example() {
                             className="block w-full rounded-lg border border-transparent bg-white px-6 py-3 text-center text-base font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400 hover:bg-gray-50"
                             aria-describedby="tier-scale"
                           >
-                            Start your trial
+                            Start now
                           </a>
                         </div>
                       </div>
