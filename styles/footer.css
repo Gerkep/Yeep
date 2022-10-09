@@ -18,6 +18,7 @@
   .footer-logo {
     width: 30vw;
     height: 13vw;
+    position: relative;
     background-image: url('http://drive.google.com/uc?export=view&id=1RM0aJWyeXjDcWSLLFkHan8e6uJq20kHb');
     background-size: contain;
     background-position: center;
@@ -30,7 +31,7 @@
     text-align: center;
   }
   #customer-service-section {
-    margin-top: 20vw;
+    margin-top: 25vw;
   }
   #connect-section {
     margin-top: 10vw;
@@ -62,6 +63,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 3vw;
   }
   .contact {
     display: flex;
@@ -76,7 +78,7 @@
     text-align: center;
     color: rgba(255, 255, 255, 0.641);
     font-size: 3vw;
-    margin-top: 8vw;
+    margin-top: 15vw;
   }
   
   @media screen and (min-width: 768px) {
@@ -96,13 +98,12 @@
       width: 15vw;
       height: 6vw;
       margin-left: 0vw;
-      margin-top: 0vw;
+      margin-top: 2vw;
     }
     .footer-section {
       width: 20vw;
       margin-left: 0vw;
       text-align: left;
-
     }
     #customer-service-section {
       margin-left: 10vw;
@@ -136,6 +137,7 @@
     }
     .contact {
       display: flex;
+      align-items: baseline;
       justify-content: left;
       font-size: 1vw;
       margin-left: 0vw;
@@ -148,7 +150,7 @@
       text-align: left;
       color: rgba(255, 255, 255, 0.725);
       font-size: 0.75vw;
-      margin-top: 2vw;
+      margin-top: 1vw;
       padding-left: 2vw;
       display: flex;
     }

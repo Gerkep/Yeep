@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Navbar from '../components/Navbar'
+import PricingSection from "../components/PricingSection"
 import styled from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
@@ -145,6 +146,7 @@ const Home: NextPage = () => {
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
         <ContactButton href='#contact'>Contact us</ContactButton>
       </div>
+      <PricingSection></PricingSection>
       <DiscountContainer>
         <SlideLeft>
           <DiscountText style={{}}><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3!</DiscountText>
@@ -178,12 +180,15 @@ export default Home
 
 const MainTitle = styled.h1`
   margin: 0 auto;
+  line-height: 12vw;
   margin-top: 40vw;
   text-align: center;
+  font-weight: 700;
   width: 90%;
   font-size: 10vw;
   @media only screen and (min-width: 768px) {
-    margin-top: 13vw;
+    line-height: 5vw;
+    margin-top: 12vw;
     font-size: 4vw;
     width: 50vw;
   }
@@ -205,11 +210,15 @@ const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 8vw;
+  @media only screen and (min-width: 768px) {
+    margin-top: 6vw;
+  }
 `
 const ConsultationContainer = styled.a`
   width: 100vw;
   display: flex;
   justify-content: center;
+  z-index: 100;
   @media only screen and (min-width: 768px) {
     display: flex;
     justify-content: end;
@@ -282,7 +291,8 @@ const ConsultationTitle = styled.h3`
   font-size: 3.5vw;
   grid-area: consultationText;
   text-align: right;
-  margin-top: -0.5vw;
+  font-weight: 500;
+  margin-top: -2vw;
   @media only screen and (min-width: 768px) {
     font-size: 0.9vw; 
   }
@@ -292,11 +302,11 @@ const ContactButton = styled.a`
         border-radius: 10px; 
         background: linear-gradient(20deg, #5755F9, #69C0FF);
         background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-        font-weight: 500;
+        font-weight: 700;
         cursor: pointer;
         width: 70vw;
-        height: 12vw;
-        font-size: 3vw;
+        height: 15vw;
+        font-size: 4vw;
         transition: all 0.3s ease;
         color: white;
         display:flex;
@@ -310,6 +320,7 @@ const ContactButton = styled.a`
             box-shadow: 1px 1px 45px #7297FC;
         }
         @media only screen and (min-width: 768px) {
+          font-weight: 500;
           width: 16vw;
           height: 4vw;
           font-size: 1.2vw;
@@ -343,9 +354,9 @@ const Subtitle = styled.h2`
   margin-top: 40vw;
   text-align: center;
   color: black;
-  font-weight: 700;
+  font-weight: 800;
   width: 90%;
-  font-size: 8vw;
+  font-size: 7vw;
   @media only screen and (min-width: 768px) {
     margin-top: 14vw;
     font-size: 3vw;
@@ -464,7 +475,7 @@ const Features = styled.div`
 
 const Feature = styled.div`
   padding: 12vw 8vw 10vw 8vw;
-  width: 80vw;
+  width: 90vw;
   border-radius: 10px;
   background-color: black;
   margin-top: 8vw;
@@ -494,6 +505,7 @@ const FeatureTitle = styled.h3`
   color: white;
   font-size: 5vw;
   margin-top: 6vw;
+  font-weight: 500;
   @media only screen and (min-width: 768px) {
     font-size: 1.5vw;
     margin-top: 1.5vw;
@@ -503,15 +515,16 @@ const FeatureTitle = styled.h3`
 const FeatureDescription = styled.p`
   color: white;
   font-size: 4vw;
+  margin-top: 4vw;
   color: #5F5F5F;
   @media only screen and (min-width: 768px) {
     font-size: 1vw;
-    margin-top: -0.5vw;
+    margin-top: 0.5vw;
   }
 `
 
 const DiscountContainer = styled.div`
-  margin-top: 40vw;
+  margin-top: 30vw;
   width: 100%;
   display: grid; 
   grid-template-columns: 1fr; 
@@ -522,7 +535,7 @@ const DiscountContainer = styled.div`
     "."; 
   @media only screen and (min-width: 768px) {
     padding: 0 0vw 0 4vw;
-    margin-top: 14vw;
+    margin-top: 12vw;
     grid-template-columns: 45% 50%; 
     grid-template-rows: 1fr; 
     grid-template-areas: 
@@ -535,10 +548,12 @@ const DiscountImage = styled.div`
   width: 100%;
   height: 60vw;
   position: relative;
+  display: none;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   @media only screen and (min-width: 768px) {
+    display: block;
     width: 100%;
     height: 40vw;
   }
@@ -565,7 +580,8 @@ const DiscountText = styled.div`
     @media only screen and (min-width: 768px) {
       font-size: 2.8vw;
       text-align: left;
-      margin-left: 3vw
+      margin-left: 3vw;
+      margin-top: -5vw;
     }
 `
 
@@ -590,7 +606,7 @@ const ContactForm = styled.form`
 const ContactInput = styled.input`
   width: 100%;
   border-radius: 10px;
-  margin: 5vw 2vw 5vw 2vw;
+  margin: 5vw 0vw 5vw 0vw;
   border: none;
   height: 15vw;
   padding: 0 3vw 0 3vw;

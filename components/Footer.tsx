@@ -1,12 +1,16 @@
 import type { NextPage } from 'next'
 import { HiPhone, HiMail, HiLocationMarker } from "react-icons/hi";
+import logo from "../public/img/logo.png";
+import Image from 'next/image';
 
 const Footer: NextPage = () => {
   return (
     <>
       <footer className="footer">
         <div className="footer-logo-container">
-          <div className="footer-logo"></div>
+          <div className="footer-logo">
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={logo}></Image>
+          </div>
         </div>
         <div className="footer-section" id="customer-service-section">
           <h4 className="footer-section-header">Customer Service</h4>

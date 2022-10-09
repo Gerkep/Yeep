@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -46,7 +49,7 @@ a {
   }
   body {
     color: black;
-    background-image: url("../public/images/background-mobile.png");
+    background-image: url("../public/img/background-mobile.png");
     background-position: center;
     background-size: cover;
     background-color: white;
@@ -57,9 +60,15 @@ a {
     width: 8vw;
     height: 8vw;
   }
+  .pricing-container{
+    margin-top: 40vw;
+  }
   @media only screen and (min-width: 768px) {
     body {
-      background-image: url("../public/images/background.png");
+      background-image: url("../public/img/background.png");
+    }
+    .pricing-container{
+      margin-top: 14vw;
     }
     .phoneIcon{
       grid-area: phoneIcon;

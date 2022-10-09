@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import logo from "../public/img/logo-black.png";
+import Image from 'next/image';
 
 const Navbar = () => {
     return(
         <Nav>
-            <Logo></Logo>
+            <Logo>
+                <Image alt="stayImage" layout='fill' objectFit='contain'  src={logo}></Image>
+            </Logo>
             <ContactButton href='#contact'> Contact us</ContactButton>
             <div style={{position: "absolute", top: "0", right: "0", padding: "2vw"}}>
                 
@@ -24,12 +28,9 @@ const Nav = styled.div`
 
 const Logo = styled.div`
     width: 100%;
-    height: 14vw;
+    height: 18vw;
     margin-top: 7vw;
-    background-image: url("http://drive.google.com/uc?export=view&id=1vm-MC0iksCtLo9_72mDPKbIFtKz0OfOL");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    position: relative;
     @media only screen and (min-width: 768px) {
         width: 14vw;
         height: 6vw;
