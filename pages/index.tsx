@@ -9,6 +9,14 @@ import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
 import { send } from "@emailjs/browser";
 import codeIcon from '../public/img/codeIcon.png';
+import safetyIcon from '../public/img/safetyIcon.png';
+import contractIcon from '../public/img/contractIcon.png';
+import findIcon from '../public/img/findIcon.png';
+import ubraniaLogo from '../public/img/ubrania.png';
+import cityParkLogo from '../public/img/citypark.png';
+import dataIcon from '../public/img/dataIcon.png';
+import desktopIcon from '../public/img/desktopIcon.png';
+import discountImage from '../public/img/macbookpanels.png';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
@@ -60,7 +68,9 @@ const Home: NextPage = () => {
       </AppearingTitle>
       <Testimonials>
         <TestimonialContainer>
-          <TestimonialLogo className='cityParkLogo'></TestimonialLogo>
+          <TestimonialLogo>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={cityParkLogo}></Image>
+          </TestimonialLogo>
           <Testimonial>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
             Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
@@ -71,7 +81,9 @@ const Home: NextPage = () => {
           </div>
         </TestimonialContainer>
         <TestimonialContainer>
-          <TestimonialLogo className='ubraniaLogo'></TestimonialLogo>
+          <TestimonialLogo>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={ubraniaLogo}></Image>
+          </TestimonialLogo>
           <Testimonial>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
             Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
@@ -95,27 +107,37 @@ const Home: NextPage = () => {
           <FeatureDescription>Our team of professional web3 devs will develop for you smart contracts with latest technologies</FeatureDescription>
         </Feature>
         <Feature>
-          <FeatureIcon className='desktopIcon'></FeatureIcon>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={desktopIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Modern, responsive, custom website</FeatureTitle>
           <FeatureDescription>Built with Next.js and serverside rendering. From Figma to code</FeatureDescription>
         </Feature>
         <Feature>
-          <FeatureIcon className='safetyIcon'></FeatureIcon>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={safetyIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Enterprise-grade security</FeatureTitle>
           <FeatureDescription>Security built into code. Legal agreements to protect your liability</FeatureDescription>
         </Feature>
         <Feature>
-          <FeatureIcon className='contractIcon'></FeatureIcon>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={contractIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Make it legal</FeatureTitle>
           <FeatureDescription>Not everything in web3 is regulated yet. We will make sure your business is 100% legal</FeatureDescription>
         </Feature>
         <Feature>
-          <FeatureIcon className='findIcon'></FeatureIcon>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={findIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Market research</FeatureTitle>
           <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race</FeatureDescription>
         </Feature>
         <Feature>
-          <FeatureIcon className='dataIcon'></FeatureIcon>
+          <FeatureIcon>
+            <Image alt="stayImage" layout='fill' objectFit='contain'  src={dataIcon}></Image>
+          </FeatureIcon>
           <FeatureTitle>Tokenization & Nftcation</FeatureTitle>
           <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning.</FeatureDescription>
         </Feature>
@@ -127,7 +149,9 @@ const Home: NextPage = () => {
         <SlideLeft>
           <DiscountText style={{}}><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3!</DiscountText>
         </SlideLeft>
-        <DiscountImage className='discountImage'></DiscountImage>
+        <DiscountImage>
+          <Image alt="stayImage" layout='fill' objectFit='contain'  src={discountImage}></Image>
+        </DiscountImage>
       </DiscountContainer>
       <AppearingTitle>
         <Subtitle id='contact'>Contact us</Subtitle>
@@ -383,6 +407,7 @@ const TestimonialContainer = styled.div`
 const TestimonialLogo = styled.div`
   width: 40vw;
   height: 12vw;
+  position: relative;
   border-radius: 10px;
   background-position: left;
   background-size: contain;
@@ -509,6 +534,7 @@ const DiscountContainer = styled.div`
 const DiscountImage = styled.div`
   width: 100%;
   height: 60vw;
+  position: relative;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
