@@ -7,7 +7,7 @@ import { NotificationsProvider } from '@mantine/notifications'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
   <MantineProvider withNormalizeCSS withGlobalStyles>
-    <NotificationsProvider>
+    <NotificationsProvider zIndex={2077}>
       <Component {...pageProps} />
     </NotificationsProvider>
   </MantineProvider>
