@@ -19,8 +19,10 @@ import dataIcon from '../public/img/dataIcon.png';
 import phoneIcon from '../public/img/phoneIcon.png';
 import desktopIcon from '../public/img/desktopIcon.png';
 import discountImage from '../public/img/macbookpanels.png';
-import Countdown from "../components/Countdown";
+const Countdown = dynamic(() => import('../components/Countdown'), {ssr: false})
 import Image from 'next/image';
+import { showNotification } from '@mantine/notifications';
+import dynamic from 'next/dynamic';
 
 const Home: NextPage = () => {
 
@@ -32,20 +34,27 @@ const Home: NextPage = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    // const templateParams = {
-    //   email: `${email}`,
-    //   maessage: `${message}`,
-    //   name: `${name}`,
-    // };
+    const templateParams = {
+      email: `${email}`,
+      message: `${message}`,
+      name: `${name}`,
+    };
 
-    // send('service_8wes2jm', 'template_7dw9y3i', templateParams, process.env.NEXT_PUBLIC_EMAILJS_USER_KEY)
-    // .then(function(response) {
-    //     console.log('SUCCESS!', response.status);
-    //     setLoading(false);
-    // }, function(error) {
-    //     console.log('FAILED...', error);
-    //     setLoading(false);
-    // });  
+    send("service_frl23bb","template_0sqonfg", templateParams, process.env.NEXT_PUBLIC_EMAILJS_USER_KEY)
+    .then(function(response) {
+        showNotification({
+          id: 'email sent',
+          disallowClose: true,
+          autoClose: 4000,
+          title: "Email sent successfully!",
+          message: 'We will reply as soon as possible. Thank you.',
+          color: 'green',
+      })
+        setLoading(false);
+    }, function(error) {
+        console.log('FAILED...', error);
+        setLoading(false);
+    });  
   }
   return (
     <>
@@ -558,7 +567,7 @@ const DiscountContainer = styled.div`
     align-items: center;
   }
 `
-const CountdownText = styled.p`
+const CountdownText = styled.div`
   font-size: 1.5vw;
   color: #5F5F5F;
   font-weight: 400;
@@ -631,6 +640,7 @@ const ContactInput = styled.input`
   border: none;
   height: 15vw;
   padding: 0 3vw 0 3vw;
+  color: white;
   font-size: 4vw;
   background-color: #25222B;
   @media only screen and (min-width: 768px) {
@@ -645,6 +655,7 @@ const ContactInput = styled.input`
 const ContactTextField = styled.textarea`
   width: 100%;
   border-radius: 10px;
+  color: white;
   border: none;
   height: 35vw;
   padding: 3vw 3vw 0 3vw;
