@@ -459,7 +459,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mantine/core@5.5.4":
+"@mantine/core@^5.5.4", "@mantine/core@5.5.4":
   "integrity" "sha512-N0k8vBxuJOAwfchxd8gr1HXjsSw1HumQR9WR2OVCHmRR84ur2VniRB8iN4pCYSvnIXjUqpN1rzfnmAYTTogS+A=="
   "resolved" "https://registry.npmjs.org/@mantine/core/-/core-5.5.4.tgz"
   "version" "5.5.4"
