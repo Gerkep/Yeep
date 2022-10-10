@@ -19,6 +19,7 @@ import dataIcon from '../public/img/dataIcon.png';
 import phoneIcon from '../public/img/phoneIcon.png';
 import desktopIcon from '../public/img/desktopIcon.png';
 import discountImage from '../public/img/macbookpanels.png';
+import Countdown from "../components/Countdown";
 import Image from 'next/image';
 
 const Home: NextPage = () => {
@@ -55,7 +56,7 @@ const Home: NextPage = () => {
       <MainDescription>A software house implementing web3 from start to finish. Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
         <ContactButton href='#contact'>Contact us</ContactButton>
-        <LearnMoreButton><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
+        <LearnMoreButton href="#features"><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
       <ConsultationContainer>
         <ConsultationComponent href='https://calendly.com/'>
@@ -99,7 +100,7 @@ const Home: NextPage = () => {
         </TestimonialContainer>
       </Testimonials>
       <AppearingTitle>
-        <Subtitle>Packed with advanced features</Subtitle>
+        <Subtitle id="features">Packed with advanced features</Subtitle>
         <Description>A complete suite of technological and legal features. Setting you up for success</Description>
       </AppearingTitle>
       <Features>
@@ -136,7 +137,7 @@ const Home: NextPage = () => {
             <Image alt="stayImage" layout='fill' objectFit='contain'  src={contractIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Make it legal</FeatureTitle>
-          <FeatureDescription>Not everything in web3 is regulated yet. We will make sure your business is 100% legal</FeatureDescription>
+          <FeatureDescription>Not everything about new generation of internet is regulated by law yet. Yepp studio will acknowledge you with latest legal documents regarding web3 world.</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
@@ -151,7 +152,9 @@ const Home: NextPage = () => {
       <PricingSection></PricingSection>
       <DiscountContainer>
         <SlideLeft>
-          <DiscountText style={{}}><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3!</DiscountText>
+          <DiscountText><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3! 
+            <br/><CountdownText>Ends in: <Countdown targetDate={"Jan 01 2023 05:30:00"}/></CountdownText>
+          </DiscountText>
         </SlideLeft>
         <DiscountImage>
           <Image alt="stayImage" layout='fill' objectFit='contain'  src={discountImage}></Image>
@@ -342,7 +345,7 @@ const ContactButton = styled.a`
         }
 `
 
-const LearnMoreButton = styled.button`
+const LearnMoreButton = styled.a`
   width: 16vw;
   height: 4vw;
   border-radius: 10px;
@@ -359,7 +362,9 @@ const LearnMoreButton = styled.button`
     box-shadow: 1px 1px 45px #7297FC;
   }
   @media only screen and (min-width: 768px) {
-    display: block
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 const Subtitle = styled.h2`
@@ -553,7 +558,11 @@ const DiscountContainer = styled.div`
     align-items: center;
   }
 `
-
+const CountdownText = styled.p`
+  font-size: 1.5vw;
+  color: #5F5F5F;
+  font-weight: 400;
+`
 const DiscountImage = styled.div`
   width: 100%;
   height: 60vw;
@@ -585,11 +594,13 @@ const DiscountColorfulText = styled.p`
 const DiscountText = styled.div`
     font-size: 5vw;
     text-align: center;
+    font-weight: 800;
     height: 1vw;
     width: 100%;
     @media only screen and (min-width: 768px) {
       font-size: 2.8vw;
       text-align: left;
+      line-height: 4vw;
       margin-left: 3vw;
       margin-top: -5vw;
     }
