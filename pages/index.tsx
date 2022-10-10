@@ -676,6 +676,7 @@ const SubmitButton = styled.button`
   border: none;
   color: white;
   display: flex;
+  font-weight: 500;
   justify-content: center;
   align-items: center;
   height: 15vw;

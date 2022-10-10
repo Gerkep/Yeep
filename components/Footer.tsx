@@ -32,13 +32,13 @@ const Footer: NextPage = () => {
         <div className="footer-section" id="connect-section">
           <h4 className="footer-section-header">Connect With Us</h4>
           <div className="footer-links">
-            <a href="https://www.victorgallery.pl/en/contact" className="footer-link">
+            <a href="#contact" className="footer-link">
               Contact Form
             </a>
-            <a href="" className="footer-link">
+            <a href="https://www.twitter.com/yeppstudios" className="footer-link">
               Twitter
             </a>
-            <a href="https://www.instagram.com/victor_oneart/" className="footer-link">
+            <a href="https://www.instagram.com/yeppstudios/" className="footer-link">
               Instagram
             </a>
           </div>
