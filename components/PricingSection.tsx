@@ -39,6 +39,8 @@ export default function PricingSection() {
 const PricingBackground = styled.div`
   margin-top: 40vw;
   width: 100%;
+  position: relative;
+  z-index: 1;
   padding: 12vw 4vw 16vw 4vw;
   background-color: black;
   @media only screen and (min-width: 768px) {

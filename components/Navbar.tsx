@@ -9,9 +9,6 @@ const Navbar = () => {
                 <Image alt="stayImage" layout='fill' objectFit='contain'  src={logo}></Image>
             </Logo>
             <ContactButton href='#contact'> Contact us</ContactButton>
-            <div style={{position: "absolute", top: "0", right: "0", padding: "2vw"}}>
-                
-            </div>
         </Nav>
     )
 }
@@ -21,7 +18,6 @@ export default Navbar;
 const Nav = styled.div`
     display: flex;
     position: absolute;
-    top: 0;
     width: 100%;
     padding: 1vw 2vw 1vw 2vw;
 `
@@ -30,6 +26,7 @@ const Logo = styled.div`
     width: 100%;
     height: 18vw;
     margin-top: 7vw;
+    z-index: 1;
     position: relative;
     @media only screen and (min-width: 768px) {
         width: 14vw;
@@ -41,6 +38,8 @@ const Logo = styled.div`
 const ContactButton = styled.a`
         display: none;
         color: white;
+        position: relative;
+        z-index: 1;
         &:hover  {
             transform: scale(1.05);
         }

@@ -1,18 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
-  body{
-    background-image: url("../public/img/backgound.png");
-  }
-}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Montserrat;
-    background-image: url("../public/img/backgound.png");
 }
 
 a {
@@ -23,7 +18,9 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.image{
+  z-index: -1;
+}
 .spinner {
   width: 56px;
   height: 56px;

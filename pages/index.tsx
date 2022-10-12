@@ -4,7 +4,7 @@ import PricingSection from "../components/PricingSection";
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
@@ -24,6 +24,9 @@ const Countdown = dynamic(() => import('../components/Countdown'), {ssr: false})
 import Image from 'next/image';
 import { showNotification } from '@mantine/notifications';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import background from "../public/img/background.png";
+import mobileBackground from "../public/img/background-mobile.png";
 
 const Home: NextPage = () => {
 
@@ -31,6 +34,14 @@ const Home: NextPage = () => {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [mobile, setMobile] = useState(true);
+
+  useEffect(() => {
+    if(window.innerWidth >= 768){
+      setMobile(false);
+      console.log("fadfs")
+    }
+  }, [])
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -58,24 +69,35 @@ const Home: NextPage = () => {
     });  
   }
   return (
-    <div className='bg-backgroundMobile md:bg-background bg-center bg-cover w-full h-full'>
+    <div className='bg-backgroundMobile md:bg-background bg-center bg-cover w-full h-full relative'>
       <Navbar />
+      {!mobile ? 
+        <Image alt="stayImage" layout='fill' objectFit='cover'  src={background}></Image> 
+      :
+        <Image alt="stayImage" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
+      }
       <AppearingTitle>
         <MainTitle>Revamp your business with <ColorfulText>web3 technology.</ColorfulText></MainTitle>
       </AppearingTitle>
       <MainDescription>A software house implementing web3 from start to finish. Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
-        <ContactButton href='#contact'>Contact us</ContactButton>
-        <LearnMoreButton href="#features"><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
+        <Link href={'#contact'}>
+          <ContactButton>Contact us</ContactButton>
+        </Link>
+        <Link href="#features">
+          <LearnMoreButton ><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
+        </Link>
       </ButtonsContainer>
       <ConsultationContainer>
-        <ConsultationComponent href='https://calendly.com/yeppstudios'>
+      <Link href={'https://calendly.com/yeppstudios'}>
+        <ConsultationComponent>
           <PhoneIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={phoneIcon}></Image>
+            <Image alt="phoneIcon" layout='fill' objectFit='contain'  src={phoneIcon}></Image>
           </PhoneIcon>
           <ConsultationTitle className='consultationText'>Book 1h consultation now!</ConsultationTitle>
           <ConsultationPrice className='consultationPrice'><p style={{textDecoration: "line-through", display: "inline"}}>$30</p> <ColorfulText>Free!</ColorfulText></ConsultationPrice>
         </ConsultationComponent>
+      </Link>
       </ConsultationContainer>
       <AppearingTitle>
         <Subtitle>Solutions for all industries</Subtitle>
@@ -84,7 +106,7 @@ const Home: NextPage = () => {
       <Testimonials>
         <TestimonialContainer>
           <TestimonialLogo>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={cityParkLogo}></Image>
+            <Image alt="logo" layout='fill' objectFit='contain'  src={cityParkLogo}></Image>
           </TestimonialLogo>
           <Testimonial>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
@@ -97,7 +119,7 @@ const Home: NextPage = () => {
         </TestimonialContainer>
         <TestimonialContainer>
           <TestimonialLogo>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={ubraniaLogo}></Image>
+            <Image alt="logo" layout='fill' objectFit='contain'  src={ubraniaLogo}></Image>
           </TestimonialLogo>
           <Testimonial>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
@@ -116,42 +138,42 @@ const Home: NextPage = () => {
       <Features>
       <Feature>
           <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={dataIcon}></Image>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={dataIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Tokenization & Nftcation</FeatureTitle>
           <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning.</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
-                <Image alt="stayImage" layout='fill' objectFit='contain'  src={codeIcon}></Image>
+                <Image alt="icon" layout='fill' objectFit='contain'  src={codeIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Custom-made smart contracts</FeatureTitle>
           <FeatureDescription>Our team of professional web3 devs will develop for you smart contracts with latest technologies</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={desktopIcon}></Image>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={desktopIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Modern, responsive, custom website</FeatureTitle>
           <FeatureDescription>Built with Next.js and serverside rendering. From Figma to code</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={safetyIcon}></Image>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={safetyIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Enterprise-grade security</FeatureTitle>
           <FeatureDescription>Security built into code. Legal agreements to protect your liability</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={contractIcon}></Image>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={contractIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Make it legal</FeatureTitle>
           <FeatureDescription>Not everything about new generation of internet is regulated by law yet. Yepp studio will acknowledge you with latest legal documents regarding web3 world.</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
-            <Image alt="stayImage" layout='fill' objectFit='contain'  src={findIcon}></Image>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={findIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Market research</FeatureTitle>
           <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race</FeatureDescription>
@@ -167,7 +189,7 @@ const Home: NextPage = () => {
           </DiscountText>
         </SlideLeft>
         <DiscountImage>
-          <Image alt="stayImage" layout='fill' objectFit='contain'  src={discountImage}></Image>
+          <Image alt="image" layout='fill' objectFit='contain'  src={discountImage}></Image>
         </DiscountImage>
       </DiscountContainer>
       <AppearingTitle>
@@ -206,14 +228,16 @@ createGlobalStyle`
 const MainTitle = styled.h1`
   margin: 0 auto;
   line-height: 12vw;
-  margin-top: 40vw;
+  padding-top: 40vw;
+  position: relative;
+  z-index: 1;
   text-align: center;
   font-weight: 700;
   width: 90%;
   font-size: 10vw;
   @media only screen and (min-width: 768px) {
     line-height: 5vw;
-    margin-top: 12vw;
+    padding-top: 12vw;
     font-size: 4vw;
     width: 50vw;
   }
@@ -222,6 +246,8 @@ const MainDescription = styled.p`
   display: none;
   @media only screen and (min-width: 768px) {
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
     display: block;
     text-align: center;
     width: 45vw;
@@ -233,6 +259,8 @@ const MainDescription = styled.p`
 const ButtonsContainer = styled.div`
   width: 100%;
   display: flex;
+  position: relative;
+  z-index: 1;
   justify-content: center;
   margin-top: 8vw;
   @media only screen and (min-width: 768px) {
@@ -243,6 +271,8 @@ const ConsultationContainer = styled.div`
   width: 100vw;
   display: flex;
   justify-content: center;
+  z-index: 100;
+  position: relative;
   z-index: 100;
   @media only screen and (min-width: 768px) {
     width: 100%;
@@ -393,6 +423,8 @@ const Subtitle = styled.h2`
   margin: 0 auto;
   margin-top: 40vw;
   text-align: center;
+  position: relative;
+  z-index: 1;
   color: black;
   font-weight: 800;
   width: 90%;
@@ -409,6 +441,8 @@ const Description = styled.p`
   text-align: center;
   width: 80vw;
   margin-top: 5vw;
+  position: relative;
+  z-index: 1;
   font-size: 4vw;
   color: #5F5F5F;
   @media only screen and (min-width: 768px) {
@@ -423,6 +457,8 @@ const Testimonials = styled.div`
   margin: 0 auto;
   margin-top: 16vw;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
   width: 90vw;
   display: grid; 
   grid-template-columns: 1fr; 
@@ -504,6 +540,8 @@ const Features = styled.div`
   margin-top: 8vw;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
   align-items: center;
   justify-content: center;
   @media only screen and (min-width: 768px) {
@@ -567,6 +605,8 @@ const DiscountContainer = styled.div`
   margin-top: 30vw;
   width: 100%;
   display: none;
+  position: relative;
+  z-index: 1;
   gap: 0px 0px; 
   @media only screen and (min-width: 768px) {
     padding: 0 0vw 0 4vw;
@@ -631,6 +671,8 @@ const ContactForm = styled.form`
   width: 90vw;
   padding 7vw 8vw 7vw 8vw;
   background-color: black;
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
   margin-top: 8vw;
   border-radius: 10px;

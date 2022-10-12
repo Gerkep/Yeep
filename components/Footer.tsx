@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { HiPhone, HiMail, HiLocationMarker } from "react-icons/hi";
 import logo from "../public/img/logo.png";
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer: NextPage = () => {
   return (
@@ -15,32 +16,26 @@ const Footer: NextPage = () => {
         <div className="footer-section" id="customer-service-section">
           <h4 className="footer-section-header">Customer Service</h4>
           <div className="footer-links">
-            <a
-              href="https://www.victorgallery.pl/static/docs/privacy.39fe4d89656b.pdf"
-              className="footer-link"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="https://www.victorgallery.pl/static/docs/terms.0f6bf7412160.pdf"
-              className="footer-link"
-            >
-              Terms & Conditions
-            </a>
+            <Link href="https://www.victorgallery.pl/static/docs/privacy.39fe4d89656b.pdf">
+              <a  className="footer-link">Privacy Policy</a>
+            </Link>
+            <Link href="https://www.victorgallery.pl/static/docs/terms.0f6bf7412160.pdf">
+              <a className="footer-link">Terms & Conditions</a>
+            </Link>
           </div>
         </div>
         <div className="footer-section" id="connect-section">
           <h4 className="footer-section-header">Connect With Us</h4>
           <div className="footer-links">
-            <a href="#contact" className="footer-link">
-              Contact Form
-            </a>
-            <a href="https://www.twitter.com/yeppstudios" className="footer-link">
-              Twitter
-            </a>
-            <a href="https://www.instagram.com/yeppstudios/" className="footer-link">
-              Instagram
-            </a>
+            <Link href={"#contact"}>
+              <a className="footer-link">Contact Form</a>
+            </Link>
+            <Link href="https://www.twitter.com/yeppstudios">
+            <a className="footer-link">Twitter</a>
+            </Link>
+            <Link href="https://www.instagram.com/yeppstudios/">
+            <a className="footer-link">Instagram</a>
+            </Link>
           </div>
         </div>
         <div className="contact">
