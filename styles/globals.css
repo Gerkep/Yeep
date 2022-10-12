@@ -47,20 +47,8 @@ a {
   html {
     color-scheme: dark;
   }
-  body {
-    color: black;
-    background-image: url("../public/img/background-mobile.png");
-    background-position: center;
-    background-size: cover;
-    background-color: white;
-  }
 
   .pricing-container{
     margin-top: 40vw;
-  }
-  @media only screen and (min-width: 768px) {
-    body {
-      background-image: url("../public/img/background.png");
-    }
   }
 }

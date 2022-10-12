@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Navbar from '../components/Navbar'
 import PricingSection from "../components/PricingSection";
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useState } from 'react';
 import Footer from '../components/Footer';
@@ -191,6 +192,19 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+createGlobalStyle`
+  body {
+    color: black;
+    background: white url('${(props) => props.theme.background}') no-repeat center/90%;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    @media only screen and (min-width: 768px) {
+      background: white url('${(props) => props.theme.background}') no-repeat center/90%;
+    }
+  } 
+`
 
 const MainTitle = styled.h1`
   margin: 0 auto;
