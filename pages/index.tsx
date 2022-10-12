@@ -25,8 +25,8 @@ import Image from 'next/image';
 import { showNotification } from '@mantine/notifications';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import background from "../public/img/background.png";
-import mobileBackground from "../public/img/background-mobile.png";
+import background from "../public/img/background.webp";
+import mobileBackground from "../public/img/background-mobile.webp";
 
 const Home: NextPage = () => {
 
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
     });  
   }
   return (
-    <div className='bg-backgroundMobile md:bg-background bg-center bg-cover w-full h-full relative'>
+    <div className='w-full h-full relative'>
       <Navbar />
       {!mobile ? 
         <Image alt="stayImage" layout='fill' objectFit='cover'  src={background}></Image> 
