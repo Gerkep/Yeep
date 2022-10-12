@@ -58,7 +58,7 @@ const Home: NextPage = () => {
     });  
   }
   return (
-    <>
+    <div className='bg-backgroundMobile md:bg-background bg-center bg-cover w-full h-full'>
       <Navbar />
       <AppearingTitle>
         <MainTitle>Revamp your business with <ColorfulText>web3 technology.</ColorfulText></MainTitle>
@@ -187,7 +187,7 @@ const Home: NextPage = () => {
         </SubmitButton>
       </ContactForm>
       <Footer />
-    </>
+    </div>
   )
 }
 
@@ -196,13 +196,10 @@ export default Home
 createGlobalStyle`
   body {
     color: black;
-    background: white url('${(props) => props.theme.background}') no-repeat center/90%;
+    background-image:  url('https://images.unsplash.com/photo-1661956600654-edac218fea67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80');
     background-position: center;
     background-size: cover;
-    background-color: white;
-    @media only screen and (min-width: 768px) {
-      background: white url('${(props) => props.theme.background}') no-repeat center/90%;
-    }
+
   } 
 `
 

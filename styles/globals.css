@@ -1,12 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  body{
+    background-image: url("../public/img/backgound.png");
+  }
+}
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif, Montserrat;
+    background-image: url("../public/img/backgound.png");
 }
 
 a {
@@ -36,19 +42,12 @@ a {
  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 0.2rem),#000 0);
  animation: spinner-c7wet2 1s infinite linear;
 }
+.pricing-container{
+  margin-top: 40vw;
+}
 
 @keyframes spinner-c7wet2 {
   100% {
      transform: rotate(1turn);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  .pricing-container{
-    margin-top: 40vw;
   }
 }

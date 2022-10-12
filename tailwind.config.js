@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    backgroundImage: {
+      'background': "url('../public/img/background.png')",
+      'backgroundMobile': "url('../public/img/background-mobile.png')",
+    },
   },
   plugins: [],
 }
