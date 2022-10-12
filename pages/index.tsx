@@ -245,8 +245,9 @@ const ConsultationContainer = styled.div`
   justify-content: center;
   z-index: 100;
   @media only screen and (min-width: 768px) {
+    width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: sticky;
     top: -1.5vw;
     margin-top: 2vw;
