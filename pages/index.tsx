@@ -69,7 +69,7 @@ const Home: NextPage = () => {
         <LearnMoreButton href="#features"><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
       <ConsultationContainer>
-        <ConsultationComponent href='https://calendly.com/'>
+        <ConsultationComponent href='https://calendly.com/yeppstudios'>
           <PhoneIcon>
             <Image alt="stayImage" layout='fill' objectFit='contain'  src={phoneIcon}></Image>
           </PhoneIcon>
