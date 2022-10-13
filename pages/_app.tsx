@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <NotificationsProvider zIndex={2077}>
       <Head>
         <title>Yepp</title>
+        <meta name="description" content="Implement web3 in your business. Custom smart contracts, web design and legal agenda." />
       </Head>
       <Component {...pageProps} />
     </NotificationsProvider>
