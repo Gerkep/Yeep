@@ -19,7 +19,7 @@ import cityParkLogo from '../public/img/citypark.png';
 import dataIcon from '../public/img/dataIcon.png';
 import phoneIcon from '../public/img/phoneIcon.png';
 import desktopIcon from '../public/img/desktopIcon.png';
-import discountImage from '../public/img/macbookpanels.png';
+import discountImage from '../public/img/yeppmacbook.png';
 const Countdown = dynamic(() => import('../components/Countdown'), {ssr: false})
 import Image from 'next/image';
 import { showNotification } from '@mantine/notifications';
