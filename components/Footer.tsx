@@ -45,11 +45,11 @@ const Footer: NextPage = () => {
           </div>
           <div className="contact-container">
           <HiMail className="contact-illustration"/>
-            <p className="email">victorgallery.oneart@gmail.com</p>
+            <p className="email">hello@yeppstudios.com</p>
           </div>
           <div className="contact-container">
           <HiLocationMarker className="contact-illustration"/>
-            <p className="address">Regatowa 31, 60-480 Poznań</p>
+            <p className="address">Poznań, Poland</p>
           </div>
         </div>
         <div className="contribution">

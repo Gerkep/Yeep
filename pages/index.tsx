@@ -89,15 +89,13 @@ const Home: NextPage = () => {
         </Link>
       </ButtonsContainer>
       <ConsultationContainer>
-      <Link href={'https://calendly.com/yeppstudios'}>
-        <ConsultationComponent>
+        <ConsultationComponent href={'https://calendly.com/yeppstudios'}>
           <PhoneIcon>
             <Image alt="phoneIcon" layout='fill' objectFit='contain'  src={phoneIcon}></Image>
           </PhoneIcon>
           <ConsultationTitle className='consultationText'>Book 1h consultation now!</ConsultationTitle>
           <ConsultationPrice className='consultationPrice'><p style={{textDecoration: "line-through", display: "inline"}}>$30</p> <ColorfulText>Free!</ColorfulText></ConsultationPrice>
         </ConsultationComponent>
-      </Link>
       </ConsultationContainer>
       <AppearingTitle>
         <Subtitle>Solutions for all industries</Subtitle>
