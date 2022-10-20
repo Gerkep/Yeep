@@ -72,9 +72,9 @@ const Home: NextPage = () => {
     <div className='w-full h-full relative'>
       <Navbar />
       {!mobile ? 
-        <Image alt="stayImage" layout='fill' objectFit='cover'  src={background}></Image> 
+        <Image alt="background" layout='fill' objectFit='cover'  src={background}></Image> 
       :
-        <Image alt="stayImage" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
+        <Image alt="background" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
       }
       <AppearingTitle>
         <MainTitle>Revamp your business with <ColorfulText>web3 technology.</ColorfulText></MainTitle>

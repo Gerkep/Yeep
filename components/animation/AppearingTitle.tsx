@@ -3,8 +3,8 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const animationVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 }, y: 0 },
-    hidden: { opacity: 0, scale: 0.5, y: 100}
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 }, y: 0 },
+    hidden: { opacity: 0, scale: 0.8, y: 50}
   };
   
 export default function ScalingElement(props: { children: any }) {
