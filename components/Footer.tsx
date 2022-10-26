@@ -41,7 +41,7 @@ const Footer: NextPage = () => {
         <div className="contact">
           <div className="contact-container">
             <HiPhone className="contact-illustration"/>
-            <p className="telephone">+48 608 830 369</p>
+            <p className="telephone">+48 539 653 528</p>
           </div>
           <div className="contact-container">
           <HiMail className="contact-illustration"/>
