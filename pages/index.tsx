@@ -26,7 +26,8 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import background from "../public/img/background.png";
 import mobileBackground from "../public/img/background-mobile.png";
-import world from "../public/img/background-gradient.png";
+import maingradient from "../public/img/background-gradient.png";
+import maingradientmobile from "../public/img/background-gradient-mobile.png";
 import { useRef } from 'react';
 
 const Home: NextPage = () => {
@@ -81,14 +82,14 @@ const Home: NextPage = () => {
         <>
         <Image alt="background" layout='fill' objectFit='cover'  src={background}></Image> 
         <WorldBackground>
-          <Image alt="background" layout='fill' objectFit='cover'  src={world}></Image> 
+          <Image alt="background" layout='fill' objectFit='cover'  src={maingradient}></Image> 
         </WorldBackground>
         </>
       :
         <>
         <Image alt="background" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
         <WorldBackground>
-          <Image alt="background" layout='fill' objectFit='cover'  src={world}></Image> 
+          <Image alt="background" layout='fill' objectFit='cover'  src={maingradientmobile}></Image> 
         </WorldBackground>
         </>
       }
