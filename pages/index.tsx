@@ -6,7 +6,6 @@ import { createGlobalStyle } from 'styled-components';
 import ColorfulText from '../components/ColorfulText';
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
-import { HiPhone } from 'react-icons/hi';
 import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
 import { send } from "@emailjs/browser";
@@ -27,6 +26,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import background from "../public/img/background.webp";
 import mobileBackground from "../public/img/background-mobile.webp";
+import { useRef } from 'react';
 
 const Home: NextPage = () => {
 
@@ -35,11 +35,11 @@ const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [mobile, setMobile] = useState(true);
+  const ref = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     if(window.innerWidth >= 768){
       setMobile(false);
-      console.log("fadfs")
     }
   }, [])
 
@@ -68,6 +68,11 @@ const Home: NextPage = () => {
         setLoading(false);
     });  
   }
+
+  const handleScroll = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth', block: 'start'});
+  };
+
   return (
     <div className='w-full h-full relative'>
       <Navbar />
@@ -84,9 +89,7 @@ const Home: NextPage = () => {
         <Link href={'#contact'}>
           <ContactButton>Contact us</ContactButton>
         </Link>
-        <Link href="#features">
-          <LearnMoreButton ><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
-        </Link>
+          <LearnMoreButton onClick={handleScroll}><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
       <ConsultationContainer>
         <ConsultationComponent href={'https://calendly.com/yeppstudios'}>
@@ -130,7 +133,7 @@ const Home: NextPage = () => {
         </TestimonialContainer>
       </Testimonials>
       <AppearingTitle>
-        <Subtitle id="features">Packed with advanced features</Subtitle>
+        <Subtitle ref={ref}>Packed with advanced features</Subtitle>
         <Description>A complete suite of technological and legal features. Setting you up for success</Description>
       </AppearingTitle>
       <Features>
