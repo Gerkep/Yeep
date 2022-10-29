@@ -77,9 +77,9 @@ const Home: NextPage = () => {
         <Image alt="background" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
       }
       <AppearingTitle>
-        <MainTitle>Revamp your business with <ColorfulText>web3 technology.</ColorfulText></MainTitle>
+        <MainTitle>Build new web <ColorfulText>with Yepp.</ColorfulText></MainTitle>
       </AppearingTitle>
-      <MainDescription>A software house implementing web3 from start to finish. Custom smart contracts, web design and legal agenda.</MainDescription>
+      <MainDescription>We make your wildest web3 dreams come true. <br /> Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
         <Link href={'#contact'}>
           <ContactButton>Contact us</ContactButton>
@@ -192,7 +192,7 @@ const Home: NextPage = () => {
       </DiscountContainer>
       <AppearingTitle>
         <Subtitle id='contact'>Contact us</Subtitle>
-        <Description>No matter if you already have an idea or not, we will find a way to take your business to another level.</Description>
+        <Description>No matter if you have an idea or not, we will find a way to take your business to another level.</Description>
       </AppearingTitle>
       <ContactForm onSubmit={(e) => sendEmail(e)}>
         <ContactInput placeholder='Full Name' value={name} onChange={(e) => setName(e.target.value)} type="text" required></ContactInput>
@@ -230,18 +230,19 @@ const MainTitle = styled.h1`
   position: relative;
   z-index: 1;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
   width: 90%;
-  font-size: 10vw;
+  font-size: 12vw;
   @media only screen and (min-width: 768px) {
-    line-height: 5vw;
-    padding-top: 12vw;
-    font-size: 4vw;
+    line-height: 6.5vw;
+    padding-top: 10vw;
+    font-size: 6vw;
     width: 50vw;
   }
 `
 const MainDescription = styled.p`
   display: none;
+  font-weight: 600;
   @media only screen and (min-width: 768px) {
     margin: 0 auto;
     position: relative;
@@ -251,7 +252,7 @@ const MainDescription = styled.p`
     width: 45vw;
     margin-top: 3vw;
     font-size: 1.8vw;
-    color: #5F5F5F;
+    color: #B7BACA;
   }
 `
 const ButtonsContainer = styled.div`
@@ -356,7 +357,7 @@ const ConsultationTitle = styled.h3`
   font-size: 4vw;
   grid-area: consultationText;
   text-align: right;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: -2vw;
   @media only screen and (min-width: 768px) {
     font-size: 1.1vw; 
@@ -439,10 +440,11 @@ const Description = styled.p`
   text-align: center;
   width: 80vw;
   margin-top: 5vw;
+  font-weight: 600;
   position: relative;
   z-index: 1;
   font-size: 4vw;
-  color: #5F5F5F;
+  color: #B7BACA;
   @media only screen and (min-width: 768px) {
     width: 32vw;
     margin-top: 1.5vw;
