@@ -20,13 +20,13 @@ export default function PricingSection() {
           <Logo>
             <Image alt="stayImage" layout='fill' objectFit='contain'  src={pear}></Image>
           </Logo>
-          <h2>Pricing</h2>
+          <h2 style={{width: "100%"}}>Pricing</h2>
           </PreTitle>
           <Title>
-            The right <ColorfulText>price for you</ColorfulText>, whoever you are
+            The right <ColorfulText>price for you</ColorfulText>, whatever you do
           </Title>
           <Description>
-            We are flexible and open for negotiations. Pitch to us your idea and get individual plan.
+            We are flexible and open for negotiations. Pitch to us your idea and get an individual plan!
           </Description>
         </div>
         <div className='flex justify-center'>
@@ -51,16 +51,17 @@ const PricingBackground = styled.div`
 
 const PreTitle = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-bottom: 10vw;
   color: #D9D7E6;
   font-weight: 800;
-  font-size: 5vw;
+  font-size: 6.5vw;
   @media only screen and (min-width: 768px) {
     margin-bottom: 4vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 `
 
@@ -69,25 +70,28 @@ const Title = styled.h2`
   font-size: 8vw;
   font-weight: 800;
   @media only screen and (min-width: 768px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
 `
 const Logo = styled.div`
   position: relative;
-  width: 8vw;
-  height: 8vw;
-  margin-right: 2vw;
+  width: 10vw;
+  height: 10vw;
+  margin-bottom: 2vw;
+  margin-right: 1vw;
   @media only screen and (min-width: 768px) {
     width: 4vw;
     height: 4vw;
-    margin-right: 1.2vw;
+    margin-right: 0.6vw;
+    margin-bottom: 0.5vw;
   }
 `
 
 const Description = styled.p`
   font-size: 4vw;
   color: #D9D7E6;
+  font-weight: 600;
   margin-top: 8vw;
   @media only screen and (min-width: 768px) {
     margin-top: 1vw;
@@ -118,7 +122,7 @@ const ContactButton = styled.a`
             box-shadow: 1px 1px 45px #7297FC;
         }
         @media only screen and (min-width: 768px) {
-          font-weight: 500;
+          font-weight: 600;
           width: 16vw;
           height: 4vw;
           font-size: 1.2vw;

@@ -24,8 +24,9 @@ import Image from 'next/image';
 import { showNotification } from '@mantine/notifications';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import background from "../public/img/background.webp";
-import mobileBackground from "../public/img/background-mobile.webp";
+import background from "../public/img/background.png";
+import mobileBackground from "../public/img/background-mobile.png";
+import world from "../public/img/background-gradient.png";
 import { useRef } from 'react';
 
 const Home: NextPage = () => {
@@ -77,9 +78,19 @@ const Home: NextPage = () => {
     <div className='w-full h-full relative'>
       <Navbar />
       {!mobile ? 
+        <>
         <Image alt="background" layout='fill' objectFit='cover'  src={background}></Image> 
+        <WorldBackground>
+          <Image alt="background" layout='fill' objectFit='cover'  src={world}></Image> 
+        </WorldBackground>
+        </>
       :
+        <>
         <Image alt="background" layout='fill' objectFit='cover'  src={mobileBackground}></Image>
+        <WorldBackground>
+          <Image alt="background" layout='fill' objectFit='cover'  src={world}></Image> 
+        </WorldBackground>
+        </>
       }
       <AppearingTitle>
         <MainTitle>Build new web <ColorfulText>with Yepp.</ColorfulText></MainTitle>
@@ -226,6 +237,14 @@ createGlobalStyle`
   } 
 `
 
+const WorldBackground = styled.div`
+  width: 100%;
+  height: 114vh;
+  position: absolute;
+  @media only screen and (min-width: 768px) {
+    height: 110vh;
+  }
+`
 const MainTitle = styled.h1`
   margin: 0 auto;
   line-height: 12vw;
@@ -255,7 +274,7 @@ const MainDescription = styled.p`
     width: 45vw;
     margin-top: 3vw;
     font-size: 1.8vw;
-    color: #B7BACA;
+    color: #1F1F1F;
   }
 `
 const ButtonsContainer = styled.div`
@@ -390,7 +409,7 @@ const ContactButton = styled.a`
             box-shadow: 1px 1px 45px #7297FC;
         }
         @media only screen and (min-width: 768px) {
-          font-weight: 500;
+          font-weight: 600;
           width: 16vw;
           height: 4vw;
           font-size: 1.2vw;
@@ -418,6 +437,7 @@ const LearnMoreButton = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
   }
 `
 const Subtitle = styled.h2`
@@ -428,9 +448,9 @@ const Subtitle = styled.h2`
   position: relative;
   z-index: 1;
   color: black;
-  font-weight: 800;
+  font-weight: 900;
   width: 90%;
-  font-size: 7vw;
+  font-size: 9vw;
   @media only screen and (min-width: 768px) {
     margin-top: 14vw;
     font-size: 3vw;
@@ -645,7 +665,7 @@ const DiscountImage = styled.div`
 
 const DiscountColorfulText = styled.p`
     font-size: 10vw;
-    font-weight: 800;
+    font-weight: 900;
     display: inline;
     background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
     -webkit-background-clip: text;
@@ -658,7 +678,7 @@ const DiscountColorfulText = styled.p`
 const DiscountText = styled.div`
     font-size: 5vw;
     text-align: center;
-    font-weight: 800;
+    font-weight: 900;
     height: 1vw;
     width: 100%;
     @media only screen and (min-width: 768px) {
