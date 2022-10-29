@@ -239,7 +239,7 @@ createGlobalStyle`
 
 const WorldBackground = styled.div`
   width: 100%;
-  height: 108vh;
+  height: 104vh;
   position: absolute;
   @media only screen and (min-width: 768px) {
     height: 110vh;
