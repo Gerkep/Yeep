@@ -123,9 +123,8 @@ const Home: NextPage = () => {
           </TestimonialLogo>
           <Testimonial>
           Grupa Konkret invests in three segments of the real estate market: investments in land properties, revitalization of historic buildings and development of residential and commercial properties. 
-          Moreover, we own many land properties in Poland, with a total area of 800 hectares, including the historic Modlin Fortress with the longest building in Europe. As a Polish Investor we endeavour to create smart and timeless destinations in Poland. 
-          We are more than happy to start working with a dynamic and ambitious YEEP Team; therefore, we will be able to combine our experience in the traditional market since 1988 with a modern approach to the NFT market. 
-          We believe it is part of real estate market’s future and it will be a bridge between tradition and innovation. 
+          We are more than happy to start working with a dynamic and ambitious YEEP Team.
+          We believe it is part of real estate market’s future and it will be a bridge between tradition and innovation.
           </Testimonial>
             <TestimonialRole>Paulina Prusiecka, Grupa Konkret</TestimonialRole>
         </TestimonialContainer>
@@ -134,8 +133,8 @@ const Home: NextPage = () => {
             <Image alt="logo" layout='fill' objectFit='contain'  src={victorLogo}></Image>
           </TestimonialLogo>
           <Testimonial>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
-            Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
+            The main reason of partnership with Yepp company, during high art project, was full support guaranteed by the software house. An individual attitude toward our idea has resulted in final success. All in all guys, we are grateful for your 
+            significant amount of efforts in order to evaluate Victor Gallery NFT.
           </Testimonial>
           <div style={{display: "flex", alignItems: "center"}}>
             <TestimonialRole>Wiktor Gaweł, Victor Gallery</TestimonialRole>
