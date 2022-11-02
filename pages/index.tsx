@@ -13,8 +13,8 @@ import codeIcon from '../public/img/codeIcon.png';
 import safetyIcon from '../public/img/safetyIcon.png';
 import contractIcon from '../public/img/contractIcon.png';
 import findIcon from '../public/img/findIcon.png';
-import ubraniaLogo from '../public/img/ubrania.png';
-import cityParkLogo from '../public/img/citypark.png';
+import victorLogo from '../public/img/victor.png';
+import konkretLogo from '../public/img/konkretlogo.png';
 import dataIcon from '../public/img/dataIcon.png';
 import phoneIcon from '../public/img/phoneIcon.png';
 import desktopIcon from '../public/img/desktopIcon.png';
@@ -119,28 +119,26 @@ const Home: NextPage = () => {
       <Testimonials>
         <TestimonialContainer>
           <TestimonialLogo>
-            <Image alt="logo" layout='fill' objectFit='contain'  src={cityParkLogo}></Image>
+            <Image alt="logo" layout='fill' objectFit='contain'  src={konkretLogo}></Image>
           </TestimonialLogo>
           <Testimonial>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
-            Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
+          Grupa Konkret invests in three segments of the real estate market: investments in land properties, revitalization of historic buildings and development of residential and commercial properties. 
+          Moreover, we own many land properties in Poland, with a total area of 800 hectares, including the historic Modlin Fortress with the longest building in Europe. As a Polish Investor we endeavour to create smart and timeless destinations in Poland. 
+          We are more than happy to start working with a dynamic and ambitious YEEP Team; therefore, we will be able to combine our experience in the traditional market since 1988 with a modern approach to the NFT market. 
+          We believe it is part of real estate market’s future and it will be a bridge between tradition and innovation. 
           </Testimonial>
-          <div style={{display: "flex", alignItems: "center"}}>
-            <TestimonialProfileImage></TestimonialProfileImage>
-            <TestimonialRole>CEO, City Park</TestimonialRole>
-          </div>
+            <TestimonialRole>Paulina Prusiecka, Grupa Konkret</TestimonialRole>
         </TestimonialContainer>
         <TestimonialContainer>
           <TestimonialLogo>
-            <Image alt="logo" layout='fill' objectFit='contain'  src={ubraniaLogo}></Image>
+            <Image alt="logo" layout='fill' objectFit='contain'  src={victorLogo}></Image>
           </TestimonialLogo>
           <Testimonial>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. 
             Numquam corrupti in laborum sed rerum et corporis. Nemo expedita voluptas culpa sapiente alias molestiae.
           </Testimonial>
           <div style={{display: "flex", alignItems: "center"}}>
-            <TestimonialProfileImage></TestimonialProfileImage>
-            <TestimonialRole>CEO, Ubrania.co</TestimonialRole>
+            <TestimonialRole>Wiktor Gaweł, Victor Gallery</TestimonialRole>
           </div>
         </TestimonialContainer>
       </Testimonials>
@@ -524,7 +522,7 @@ const TestimonialLogo = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   @media only screen and (min-width: 768px) {
-    width: 10vw;
+    width: 8vw;
     height: 3vw;
   }
 `
@@ -538,21 +536,20 @@ const Testimonial = styled.div`
     font-size: 1.2vw;
   }
 `
-const TestimonialProfileImage = styled.div`
-  width: 12vw;
-  height: 12vw;
-  border-radius: 50%;
-  background-color: gray;
-  margin-top: 6vw;
-  @media only screen and (min-width: 768px) {
-    width: 3vw;
-    height: 3vw;
-    margin-top: 2vw;
-  }
-`
+// const TestimonialProfileImage = styled.div`
+//   width: 12vw;
+//   height: 12vw;
+//   border-radius: 50%;
+//   background-color: gray;
+//   margin-top: 6vw;
+//   @media only screen and (min-width: 768px) {
+//     width: 3vw;
+//     height: 3vw;
+//     margin-top: 2vw;
+//   }
+// `
 const TestimonialRole = styled.div`
   color: #5F5F5F;
-  margin-left: 4vw;
   margin-top: 6vw;
   @media only screen and (min-width: 768px) {
     margin-top: 2vw;
