@@ -272,7 +272,7 @@ const MainDescription = styled.p`
     width: 45vw;
     margin-top: 3vw;
     font-size: 1.8vw;
-    color: #1F1F1F;
+    color: #575757;
   }
 `
 const ButtonsContainer = styled.div`
@@ -426,7 +426,7 @@ const LearnMoreButton = styled.a`
   display: none;
   transition: all 0.3s ease;
   cursor: pointer;
-  background-color: #ECECEC;
+  background-color: #FFFFFF;
   &:hover  {
     transform: scale(1.05);
     box-shadow: 1px 1px 45px #7297FC;
@@ -527,7 +527,7 @@ const TestimonialLogo = styled.div`
 `
 
 const Testimonial = styled.div`
-  color: #5F5F5F;
+  color: #D1D1D1;
   margin-top: 6vw;
   font-size: 4vw;
   @media only screen and (min-width: 768px) {
@@ -548,7 +548,7 @@ const Testimonial = styled.div`
 //   }
 // `
 const TestimonialRole = styled.div`
-  color: #5F5F5F;
+  color: #D1D1D1;
   margin-top: 6vw;
   @media only screen and (min-width: 768px) {
     margin-top: 2vw;
@@ -614,7 +614,7 @@ const FeatureDescription = styled.p`
   color: white;
   font-size: 4vw;
   margin-top: 4vw;
-  color: #5F5F5F;
+  color: #D1D1D1;
   @media only screen and (min-width: 768px) {
     font-size: 1vw;
     margin-top: 0.5vw;
@@ -641,7 +641,7 @@ const DiscountContainer = styled.div`
 `
 const CountdownText = styled.div`
   font-size: 1.5vw;
-  color: #5F5F5F;
+  color: #D1D1D1;
   font-weight: 400;
 `
 const DiscountImage = styled.div`
