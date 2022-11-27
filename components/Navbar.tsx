@@ -2,13 +2,17 @@ import styled from 'styled-components';
 import logo from "../public/img/logo-black.png";
 import Image from 'next/image';
 
-const Navbar = () => {
+const Navbar = (props: {contactScroll: any}) => {
     return(
         <Nav>
             <Logo>
                 <Image alt="stayImage" layout='fill' objectFit='contain'  src={logo}></Image>
             </Logo>
-            <ContactButton href='#contact'> Contact us</ContactButton>
+            <LinksContainer>
+                <Link href='https://www.degendeeds.com'>Gm Counter</Link>
+                <Link href='https://www.kenzopenthouse.com'>Kenzo Penthouse</Link>
+                <ContactButton onClick={props.contactScroll}> Contact us</ContactButton>
+            </LinksContainer>
         </Nav>
     )
 }
@@ -20,6 +24,14 @@ const Nav = styled.div`
     position: absolute;
     width: 100%;
     padding: 1vw 2vw 1vw 2vw;
+    @media only screen and (min-width: 768px) {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+        ". ."; 
+    }
 `
 
 const Logo = styled.div`
@@ -34,8 +46,26 @@ const Logo = styled.div`
         margin-top: 0;
     }
 `
+const Link = styled.a`
+    margin-right: 5vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover  {
+        transform: scale(1.05);
+      }
+`
 
-const ContactButton = styled.a`
+const LinksContainer = styled.div`
+    display: none;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        z-index: 2;
+      }
+`
+const ContactButton = styled.button`
         display: none;
         color: white;
         position: relative;
@@ -47,16 +77,15 @@ const ContactButton = styled.a`
           display: flex;
           justify-content: center;
           align-items: center;
-          position: absolute;
-          right: 2vw;
-          top: 2.5vw;
+          position: relative;
+
           width: 12vw;
+          font-weight: 600;
           height: 3vw;
           border-radius: 10px;
             border: none;       
             background: linear-gradient(20deg, #5755F9, #69C0FF);
             background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover  {

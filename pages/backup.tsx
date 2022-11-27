@@ -100,12 +100,14 @@ const Home: NextPage = () => {
         {!mobile ?
           <MainTitle>Build <ColorfulText>your web3</ColorfulText> project with Yepp.</MainTitle>
         :
-          <MainTitle>Build new web <ColorfulText>with Yepp</ColorfulText></MainTitle>
+          <MainTitle>Build new web<ColorfulText>with Yepp</ColorfulText></MainTitle>
         }
       </AppearingTitle>
       <MainDescription>We make your ideas a reality. Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
-          <ContactButton href={'https://calendly.com/yeppstudios'}>Get started for free</ContactButton>
+        <a href={'https://calendly.com/yeppstudios'}>
+          <ContactButton>Get started for free</ContactButton>
+        </a>
           <LearnMoreButton onClick={() => handleScroll()}><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
       </ButtonsContainer>
       <ConsultationContainer>
@@ -395,7 +397,6 @@ const ContactButton = styled.a`
         background: linear-gradient(20deg, #5755F9, #69C0FF);
         background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
         font-weight: 700;
-        color: white;
         cursor: pointer;
         width: 70vw;
         height: 15vw;
