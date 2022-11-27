@@ -98,12 +98,12 @@ const Home: NextPage = () => {
       }
       <AppearingTitle>
         {!mobile ?
-          <MainTitle>Build <ColorfulText>your web3</ColorfulText> project with Yepp.</MainTitle>
+          <MainTitle>Build <ColorfulText>your web3</ColorfulText> idea with Yepp.</MainTitle>
         :
           <MainTitle>Build new web <ColorfulText>with Yepp</ColorfulText></MainTitle>
         }
       </AppearingTitle>
-      <MainDescription>We make your ideas a reality. Custom smart contracts, web design and legal agenda.</MainDescription>
+      <MainDescription>We bring your great ideas into a reality. Custom smart contracts, web design and legal agenda.</MainDescription>
       <ButtonsContainer>
           <ContactButton href={'https://calendly.com/yeppstudios'}>Get started for free</ContactButton>
           <LearnMoreButton onClick={() => handleScroll()}><ColorfulText>Learn more</ColorfulText></LearnMoreButton>

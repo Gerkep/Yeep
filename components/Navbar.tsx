@@ -59,6 +59,9 @@ const Link = styled.a`
 const LinksContainer = styled.div`
     display: none;
     @media only screen and (min-width: 768px) {
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
         display: flex;
         align-items: center;
         justify-content: end;
