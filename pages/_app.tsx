@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <MantineProvider withNormalizeCSS withGlobalStyles>
       <NotificationsProvider zIndex={2077}>
         <Head>
-          <title>Web3 Development Company in Europe | Yepp</title>
+          <title>Web3 Development Company based in Europe | Yepp</title>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
           <meta name="description" content="Build your web3 business today. We will develop for you smart contracts, design a website and conduct market research." />
 
