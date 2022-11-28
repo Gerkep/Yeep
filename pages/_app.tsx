@@ -24,9 +24,20 @@ function MyApp({ Component, pageProps }: AppProps) {
     <MantineProvider withNormalizeCSS withGlobalStyles>
       <NotificationsProvider zIndex={2077}>
         <Head>
-          <title>Web3 Software House in Europe | Yepp</title>
+          <title>Web3 Development Company in Europe | Yepp</title>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
-          <meta name="description" content="Implement web3 in your business. Custom smart contracts, web design and legal agenda." />
+          <meta name="description" content="Build your web3 business today. We will develop for you smart contracts, design a website and conduct market research." />
+
+          <meta property="og:title" content="Yepp | Web3 Development Company" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1woqUDs8-Asfxr01XyX-cZ1kFHnJBTp-F"/>
+          <meta property="og:url" content="https://drive.google.com/uc?export=view&id=1woqUDs8-Asfxr01XyX-cZ1kFHnJBTp-F"/>
+
+          <meta name="twitter:card" content="summary_large_image"/>
+          <meta property="og:description" content="Build your web3 business today. We will develop for you smart contracts, design a website and conduct market research."/>
+          <meta property="og:site_name" content="Yepp | Web3 Development Company"/>
+          <meta name="twitter:image:alt" content="Yepp logo"></meta>
+          <meta name="twitter:image" content="https://drive.google.com/uc?export=view&id=1woqUDs8-Asfxr01XyX-cZ1kFHnJBTp-F"></meta>
         </Head>
         <Component {...pageProps} />
       </NotificationsProvider>

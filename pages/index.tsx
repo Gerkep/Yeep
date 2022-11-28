@@ -103,7 +103,7 @@ const Home: NextPage = () => {
           <MainTitle>Build new web <ColorfulText>with Yepp</ColorfulText></MainTitle>
         }
       </AppearingTitle>
-      <MainDescription>We bring your great ideas into a reality. Custom smart contracts, web design and legal agenda.</MainDescription>
+      <MainDescription>We bring your best ideas into a reality. Custom smart contracts, web design and web3 legal agenda.</MainDescription>
       <ButtonsContainer>
           <ContactButton href={'https://calendly.com/yeppstudios'}>Get started for free</ContactButton>
           <LearnMoreButton onClick={() => handleScroll()}><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
