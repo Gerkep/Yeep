@@ -30,14 +30,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           <meta property="og:title" content="Yepp | Web3 Development Company" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1sSghuQUnUN30BOH7DQ1ZaZW2ANxpfcoU"/>
+          <meta property="og:image" content="http://drive.google.com/uc?export=view&id=1sSghuQUnUN30BOH7DQ1ZaZW2ANxpfcoU"/>
           <meta property="og:url" content="https://www.yeppstudios.com"/>
 
           <meta name="twitter:card" content="summary_large_image"/>
           <meta property="og:description" content="Build your web3 business today. We will develop for you smart contracts, design a website and conduct market research."/>
           <meta property="og:site_name" content="Yepp | Web3 Development Company"/>
           <meta name="twitter:image:alt" content="Yepp logo"></meta>
-          <meta name="twitter:image" content="https://drive.google.com/uc?export=view&id=1sSghuQUnUN30BOH7DQ1ZaZW2ANxpfcoU"></meta>
+          <meta name="twitter:image" content="http://drive.google.com/uc?export=view&id=1sSghuQUnUN30BOH7DQ1ZaZW2ANxpfcoU"></meta>
         </Head>
         <Component {...pageProps} />
       </NotificationsProvider>
