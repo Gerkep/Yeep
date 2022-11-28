@@ -98,7 +98,7 @@ const Home: NextPage = () => {
       }
       <AppearingTitle>
         {!mobile ?
-          <MainTitle>Build <ColorfulText>your web3</ColorfulText> idea with Yepp.</MainTitle>
+          <MainTitle>Build <ColorfulText>your web3</ColorfulText> idea with Yepp</MainTitle>
         :
           <MainTitle>Build new web <ColorfulText>with Yepp</ColorfulText></MainTitle>
         }
@@ -183,8 +183,8 @@ const Home: NextPage = () => {
           <FeatureIcon>
             <Image alt="icon" layout='fill' objectFit='contain'  src={contractIcon}></Image>
           </FeatureIcon>
-          <FeatureTitle>Make it legal</FeatureTitle>
-          <FeatureDescription>Not everything about new generation of internet is regulated by law yet. Yepp studio will acknowledge you with latest legal documents regarding web3 world.</FeatureDescription>
+          <FeatureTitle>Legal help</FeatureTitle>
+          <FeatureDescription>Not everything in web3 is regulated by law yet. Yepp will help you with latest legal documents in the industry.</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
@@ -197,16 +197,33 @@ const Home: NextPage = () => {
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
       </div>
       <PricingSection></PricingSection>
-      <DiscountContainer>
-        <SlideLeft>
-          <DiscountText><DiscountColorfulText>Now 50% off</DiscountColorfulText><br /> for businesses new to web3! 
-            <br/><CountdownText>Ends in: <Countdown targetDate={"Jan 01 2023 05:30:00"}/></CountdownText>
-          </DiscountText>
-        </SlideLeft>
-        <DiscountImage>
-          <Image alt="image" layout='fill' objectFit='contain'  src={discountImage}></Image>
-        </DiscountImage>
-      </DiscountContainer>
+      <AppearingTitle>
+        <Subtitle>Why build with us?</Subtitle>
+        <Description>We are like no other web3 software house, pioneering is our specialty.</Description>
+      </AppearingTitle>
+      <Features>
+        <ReasonContainer>
+          <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"}></Image></ReasonImage>
+          <ReasonTitle>Uniqueness</ReasonTitle>
+          <ReasonDescription>
+          The vast majority of web3 software houses (around 80%) is based either in US or India, leaving Europe with only around a dozen businesses of this kind. Even though it plays a crucial role in the entire web3 ecosystem.
+          </ReasonDescription>
+        </ReasonContainer>
+        <ReasonContainer>
+          <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1565728744382-61accd4aa148?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"}></Image></ReasonImage>
+          <ReasonTitle>Expertise</ReasonTitle>
+          <ReasonDescription>
+            Our CTO is the winner of ETHAmsterdam and ETHWarsaw hackathons with major prizes from other web3 events in New York, San Francisco, Paris and Berlin. It means, we build great products in short amout of time.
+          </ReasonDescription>
+        </ReasonContainer>
+        <ReasonContainer>
+          <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"}></Image></ReasonImage>
+          <ReasonTitle>Creativity & Flexibility</ReasonTitle>
+          <ReasonDescription>
+            You don&apos;t need an idea on how to level up your business with web3. Our creative team will find the best option for you and do the necessary market research, so that your company will benefit the most out of this new technology.
+          </ReasonDescription>
+        </ReasonContainer>
+      </Features>
       <AppearingTitle>
         <Subtitle id='contact'>Contact us</Subtitle>
         <Description>No matter if you have an idea or not, we will find a way to take your business to another level.</Description>
@@ -589,7 +606,7 @@ const Feature = styled.div`
     width: 25vw;
     height: 18vw;
     padding: 3vw 2vw 2vw 2vw;
-    margin: 1vw;
+    margin: 0 1vw 2vw 1vw;
     border-radius: 20px;
   }
 `
@@ -629,70 +646,55 @@ const FeatureDescription = styled.p`
   }
 `
 
-const DiscountContainer = styled.div`
-  margin-top: 30vw;
-  width: 100%;
-  display: none;
-  position: relative;
-  z-index: 1;
-  gap: 0px 0px; 
+const ReasonContainer = styled.div`
+  padding: 1vw 6vw 10vw 6vw;
+  width: 90vw;
+  border-radius: 10px;
+  background-color: black;
+  margin-top: 8vw;
   @media only screen and (min-width: 768px) {
-    padding: 0 0vw 0 4vw;
-    margin-top: 12vw;
-    display: grid;
-    grid-template-columns: 45% 50%; 
-    grid-template-rows: 1fr; 
-    grid-template-areas: 
-      ". ."; 
-    align-items: center;
+    width: 25vw;
+    height: 31vw;
+    padding: 1vw 1vw 2vw 1vw;
+    margin: 0vw 2vw 0 2vw;
+    border-radius: 20px;
   }
 `
-const CountdownText = styled.div`
-  font-size: 1.5vw;
+const ReasonImage = styled.div`
+  width: 100%;
+  height: 40vw;
+  border-radius: 10px;
+  margin-top: 8vw;
+  position: relative;
+  overflow: hidden;
+  @media only screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 23vw;
+    height: 15vw;
+    padding: 0;
+    border-radius: 20px;
+  }
+`
+const ReasonTitle = styled.h3`
+color: white;
+font-size: 6vw;
+margin-top: 6vw;
+font-weight: 500;
+@media only screen and (min-width: 768px) {
+  font-size: 1.8vw;
+  margin-top: 1.5vw;
+}
+`
+const ReasonDescription = styled.p`
+  color: white;
+  font-size: 4vw;
+  margin-top: 4vw;
   color: #D1D1D1;
-  font-weight: 400;
-`
-const DiscountImage = styled.div`
-  width: 100%;
-  height: 60vw;
-  position: relative;
-  display: none;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   @media only screen and (min-width: 768px) {
-    display: block;
-    width: 100%;
-    height: 40vw;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    width: 95%;
   }
-
-`
-
-const DiscountColorfulText = styled.p`
-    font-size: 10vw;
-    font-weight: 900;
-    display: inline;
-    background: -webkit-linear-gradient(20deg, #5755F9, #69C0FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @media only screen and (min-width: 768px) {
-      font-size: 5vw;
-    }
-`
-
-const DiscountText = styled.div`
-    font-size: 5vw;
-    text-align: center;
-    font-weight: 900;
-    height: 1vw;
-    width: 100%;
-    @media only screen and (min-width: 768px) {
-      font-size: 2.8vw;
-      text-align: left;
-      line-height: 4vw;
-      margin-left: 3vw;
-      margin-top: -5vw;
-    }
 `
 
 const ContactForm = styled.form`
