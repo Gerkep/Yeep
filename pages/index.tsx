@@ -10,8 +10,8 @@ import AppearingTitle from '../components/animation/AppearingTitle';
 import SlideLeft from '../components/animation/SlideLeft';
 import { send } from "@emailjs/browser";
 import codeIcon from '../public/img/codeIcon.png';
-import safetyIcon from '../public/img/safetyIcon.png';
-import contractIcon from '../public/img/contractIcon.png';
+import openaiLogo from '../public/img/openaiLogo.png';
+import chatbotIcon from '../public/img/chatbotIcon.png';
 import findIcon from '../public/img/findIcon.png';
 import victorLogo from '../public/img/victor.png';
 import konkretLogo from '../public/img/konkretlogo.png';
@@ -98,12 +98,12 @@ const Home: NextPage = () => {
       }
       <AppearingTitle>
         {!mobile ?
-          <MainTitle>Build <ColorfulText>your web3</ColorfulText> idea with Yepp</MainTitle>
+          <MainTitle>Build <ColorfulText>your AI & web3</ColorfulText> ideas with Yepp</MainTitle>
         :
           <MainTitle>Build new web <ColorfulText>with Yepp</ColorfulText></MainTitle>
         }
       </AppearingTitle>
-      <MainDescription>We bring your best ideas into a reality. Custom smart contracts, web design and web3 legal agenda.</MainDescription>
+      <MainDescription>We bring your best ideas into a reality. ChatGPT plugins, web3 and AI solutions.</MainDescription>
       <ButtonsContainer>
           <ContactButton href={'https://calendly.com/yeppstudios'}>Get started for free</ContactButton>
           <LearnMoreButton onClick={() => handleScroll()}><ColorfulText>Learn more</ColorfulText></LearnMoreButton>
@@ -153,45 +153,45 @@ const Home: NextPage = () => {
       <Features>
       <Feature>
           <FeatureIcon>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={openaiLogo}></Image>
+          </FeatureIcon>
+          <FeatureTitle>ChatGPT plugins</FeatureTitle>
+          <FeatureDescription>Make your own idea and business accessible through the fastest growing platform ever.</FeatureDescription>
+      </Feature>
+      <Feature>
+          <FeatureIcon>
+            <Image alt="icon" layout='fill' objectFit='contain'  src={chatbotIcon}></Image>
+          </FeatureIcon>
+          <FeatureTitle>AI chatbots</FeatureTitle>
+          <FeatureDescription>Optimize your support and empower your websites and apps with AI assistant that will help you satisfy customers</FeatureDescription>
+      </Feature>
+      <Feature>
+          <FeatureIcon>
             <Image alt="icon" layout='fill' objectFit='contain'  src={dataIcon}></Image>
           </FeatureIcon>
-          <FeatureTitle>Tokenization & Nftcation</FeatureTitle>
-          <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning.</FeatureDescription>
+          <FeatureTitle>Tokens & NFTs</FeatureTitle>
+          <FeatureDescription>Everything can be tokenized, stored on blockchain and monetized. From house to coffee you drink in the morning</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
                 <Image alt="icon" layout='fill' objectFit='contain'  src={codeIcon}></Image>
           </FeatureIcon>
-          <FeatureTitle>Custom-made smart contracts</FeatureTitle>
+          <FeatureTitle>Smart contracts</FeatureTitle>
           <FeatureDescription>Our team of professional web3 devs will develop for you smart contracts with latest technologies</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
             <Image alt="icon" layout='fill' objectFit='contain'  src={desktopIcon}></Image>
           </FeatureIcon>
-          <FeatureTitle>Modern, responsive, custom website</FeatureTitle>
+          <FeatureTitle>Custom websites</FeatureTitle>
           <FeatureDescription>Built with Next.js and serverside rendering. From Figma to code</FeatureDescription>
-        </Feature>
-        <Feature>
-          <FeatureIcon>
-            <Image alt="icon" layout='fill' objectFit='contain'  src={safetyIcon}></Image>
-          </FeatureIcon>
-          <FeatureTitle>Enterprise-grade security</FeatureTitle>
-          <FeatureDescription>Security built into code. Legal agreements to protect your liability</FeatureDescription>
-        </Feature>
-        <Feature>
-          <FeatureIcon>
-            <Image alt="icon" layout='fill' objectFit='contain'  src={contractIcon}></Image>
-          </FeatureIcon>
-          <FeatureTitle>Legal help</FeatureTitle>
-          <FeatureDescription>Not everything in web3 is regulated by law yet. Yepp will help you with latest legal documents in the industry.</FeatureDescription>
         </Feature>
         <Feature>
           <FeatureIcon>
             <Image alt="icon" layout='fill' objectFit='contain'  src={findIcon}></Image>
           </FeatureIcon>
           <FeatureTitle>Market research</FeatureTitle>
-          <FeatureDescription>Get to know what your competitors are cooking in web3 space. We will make sure you outpace them in this race</FeatureDescription>
+          <FeatureDescription>Get to know what your competitors are cooking in web3 and AI space. We will make sure you outpace them in this race</FeatureDescription>
         </Feature>
       </Features>
       <div style={{display: "flex", justifyContent: "center", width: "100%", marginTop: "4vw"}}>
@@ -199,28 +199,28 @@ const Home: NextPage = () => {
       <PricingSection></PricingSection>
       <AppearingTitle>
         <Subtitle>Why build with us?</Subtitle>
-        <Description>We are like no other web3 software house, pioneering is our specialty.</Description>
+        <Description>We are like no other software house, pioneering is our specialty.</Description>
       </AppearingTitle>
       <Features>
         <ReasonContainer>
           <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80"}></Image></ReasonImage>
           <ReasonTitle>Uniqueness</ReasonTitle>
           <ReasonDescription>
-          The vast majority of web3 software houses (around 80%) is based either in US or India, leaving Europe with only around a dozen businesses of this kind. Even though it plays a crucial role in the entire web3 ecosystem.
+          The vast majority of software houses is obsolete and specializes in an old way of building software. We are always up-to-date and working on latest technology solutions with latest standards and frameworks.
           </ReasonDescription>
         </ReasonContainer>
         <ReasonContainer>
           <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1565728744382-61accd4aa148?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"}></Image></ReasonImage>
           <ReasonTitle>Expertise</ReasonTitle>
           <ReasonDescription>
-            Our CTO is the winner of ETHAmsterdam and ETHWarsaw hackathons with major prizes from other web3 events in New York, San Francisco, Paris and Berlin. It means, we build great products in short amout of time.
+            Our CTO is the winner of ETHAmsterdam and ETHWarsaw global hackathons with major prizes from other web3 events in New York, San Francisco, Paris and Berlin. It means, we build great products in short amout of time.
           </ReasonDescription>
         </ReasonContainer>
         <ReasonContainer>
           <ReasonImage><Image alt="icon" layout='fill' objectFit='cover'  src={"https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"}></Image></ReasonImage>
           <ReasonTitle>Creativity & Flexibility</ReasonTitle>
           <ReasonDescription>
-            You don&apos;t need an idea on how to level up your business with web3. Our creative team will find the best option for you and do the necessary market research, so that your company will benefit the most out of this new technology.
+            You don&apos;t need an idea on how to level up your business with web3 nor AI. Our creative team will find the best solutions for you and do the necessary market research, so that your company will benefit the most.
           </ReasonDescription>
         </ReasonContainer>
       </Features>
@@ -278,8 +278,8 @@ const MainTitle = styled.h1`
   @media only screen and (min-width: 768px) {
     line-height: 6.5vw;
     padding-top: 10vw;
-    font-size: 5.5vw;
-    width: 50vw;
+    font-size: 5.2vw;
+    width: 54vw;
   }
 `
 const MainDescription = styled.p`

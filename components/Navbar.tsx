@@ -9,6 +9,7 @@ const Navbar = (props: {contactScroll: any}) => {
                 <Image alt="stayImage" layout='fill' objectFit='contain'  src={logo}></Image>
             </Logo>
             <LinksContainer>
+                <Link href='https://asystent.ai'>Asystent AI</Link>
                 <Link href='https://www.degendeeds.com'>Gm Counter</Link>
                 <Link href='https://www.kenzopenthouse.com'>Kenzo Penthouse</Link>
                 <ContactButton onClick={props.contactScroll}> Contact us</ContactButton>
@@ -47,7 +48,7 @@ const Logo = styled.div`
     }
 `
 const Link = styled.a`
-    margin-right: 5vw;
+    margin-right: 4vw;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
